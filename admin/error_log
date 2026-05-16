@@ -1,0 +1,57 @@
+[28-Jun-2024 11:30:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/ibpwebtech/public_html/admin/includes/conn.php:17
+Stack trace:
+#0 /home/ibpwebtech/public_html/admin/login.php(2): include()
+#1 {main}
+  thrown in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
+[28-Jun-2024 11:30:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/ibpwebtech/public_html/admin/includes/conn.php:17
+Stack trace:
+#0 /home/ibpwebtech/public_html/admin/login.php(2): include()
+#1 {main}
+  thrown in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
+[28-Jun-2024 11:30:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/ibpwebtech/public_html/admin/includes/conn.php:17
+Stack trace:
+#0 /home/ibpwebtech/public_html/admin/login.php(2): include()
+#1 {main}
+  thrown in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
+[28-Jun-2024 12:08:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/ibpwebtech/public_html/admin/includes/conn.php:17
+Stack trace:
+#0 /home/ibpwebtech/public_html/admin/login.php(2): include()
+#1 {main}
+  thrown in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
+[02-Sep-2024 15:03:45 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
+[02-Sep-2024 15:03:45 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
+[02-Sep-2024 15:09:44 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
+[02-Sep-2024 15:09:44 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
+[04-Sep-2024 15:37:44 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
+[04-Sep-2024 15:37:44 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
+[09-Sep-2024 15:13:42 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
+[09-Sep-2024 15:13:42 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
+[10-Sep-2024 15:17:09 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
+[10-Sep-2024 15:17:09 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
+[10-Sep-2024 15:17:10 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
+[10-Sep-2024 15:17:10 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
+[12-Sep-2024 15:42:32 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
+[12-Sep-2024 15:42:32 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
+[12-Sep-2024 15:42:33 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
+[12-Sep-2024 15:42:33 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
+[13-Sep-2024 17:18:41 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
+[13-Sep-2024 17:18:41 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
+[14-Sep-2024 14:56:12 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
+[14-Sep-2024 14:56:12 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
+[20-Sep-2024 17:16:53 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
+[20-Sep-2024 17:16:53 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
+[20-Sep-2024 17:16:53 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
+[20-Sep-2024 17:16:53 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
+[28-Nov-2024 11:04:04 UTC] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
+[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ibpwebtech/public_html/admin/includes/header.php on line 8
+[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ibpwebtech/public_html/admin/includes/header.php on line 9
+[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
+[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ibpwebtech/public_html/admin/index.php on line 5
+[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ibpwebtech/public_html/admin/index.php on line 6
+[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ibpwebtech/public_html/admin/index.php on line 8
+[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ibpwebtech/public_html/admin/index.php on line 9
+[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ibpwebtech/public_html/admin/index.php on line 11
+[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ibpwebtech/public_html/admin/index.php on line 12
+[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
+[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ibpwebtech/public_html/admin/includes/footer.php on line 8
+[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ibpwebtech/public_html/admin/includes/footer.php on line 9

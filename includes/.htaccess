@@ -1,0 +1,8 @@
+# Protect included files from direct browser access
+<FilesMatch "\.(php|inc|json)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Optional alternative for newer Apache versions
+# Require all denied

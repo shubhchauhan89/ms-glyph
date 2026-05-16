@@ -1,46 +1,171 @@
 <?php
-    /*
-    name
-    email
-    message
-    */
-    // Only process POST reqeusts.
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Get the form fields and remove whitespace.
-        $name = strip_tags(trim($_POST["name"]));
-        $name = str_replace(array("\r","\n"),array(" "," "),$name);
-        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $message = trim($_POST["message"]);
-
-        
-
-        // Set the recipient email address.
-        // FIXME: Update this to your desired email address.
-        $recipient = "example@example.com";
-
-        // Build the email content.
-        $email_content = "Name $name\n";
-        $email_content .= "Email \n$message\n";
-        $email_content .= "Message \n$message\n";
-
-        // Build the email headers.
-        $email_headers = "From: $name <$email>";
-
-        // Send the email.
-        if (mail($recipient,  $email_content, $email_headers)) {
-            // Set a 200 (okay) response code.
-            http_response_code(200);
-            echo "Thank You! Your message has been sent.";
-        } else {
-            // Set a 500 (internal server error) response code.
-            http_response_code(500);
-            echo "Oops! Something went wrong ande we couldn't send your message.";
-        }
-
-    } else {
-        // Not a POST request, set a 403 (forbidden) response code.
-        http_response_code(403);
-        echo "There was a problem with your submission, please try again.";
-    }
-
+include_once 'includes/db.php';
+include_once 'includes/config.php';
+$page_title = 'Contact';
+include_once 'includes/header.php';
 ?>
+
+        <!-- Breadcrumb Section Start -->
+        <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb.jpg');">
+            <div class="left-shape">
+                <img src="assets/img/breadcrumb-shape.png" alt="img">
+            </div>
+            <div class="right-shape">
+                <img src="assets/img/breadcrumb-shape-2.png" alt="img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <div class="breadcrumb-sub-title">
+                        <h1 class="wow fadeInUp" data-wow-delay=".3s">Start Your Blueprint.</h1>
+                        <p class="wow fadeInUp text-white mt-3" data-wow-delay=".4s" style="max-width: 600px; margin: 0 auto;">Ready to execute your vision with precision? Reach out to our Delhi NCR-based team to discuss your next project.</p>
+                    </div>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li>
+                            <a href="index.php">
+                            Home
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li>
+                            Contact Us
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Info Section Start -->
+        <section class="contact-info-section fix section-padding">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="contact-info-items text-center active">
+                            <div class="icon">
+                               <i class="icon-09"></i>
+                            </div>
+                            <div class="content">
+                                <h3>Our Studio</h3>
+                                <p>
+                                    Block C, Yamuna Vihar, Delhi, 110053.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="contact-info-items text-center">
+                            <div class="icon">
+                                <i class="icon-10"></i>
+                            </div>
+                            <div class="content">
+                                <h3>Digital Correspondence</h3>
+                                <p>
+                                    <a href="mailto:hello@msglyph.com">hello@msglyph.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                        <div class="contact-info-items text-center">
+                            <div class="icon">
+                                <i class="icon-11"></i>
+                            </div>
+                            <div class="content">
+                                <h3>Direct Line</h3>
+                                <p>
+                                    <a href="tel:+910000000000">+91-000-0000000</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".9s">
+                        <div class="contact-info-items text-center">
+                            <div class="icon">
+                                <i class="fal fa-clock" style="font-size: 32px; color: #2151f5;"></i>
+                            </div>
+                            <div class="content">
+                                <h3>Execution Hours</h3>
+                                <p>
+                                    Mon - Sat: <br> 10:00 AM - 7:00 PM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section Start -->
+        <section class="contact-section-33 fix section-padding pt-0">
+            <div class="container">
+                <div class="contact-wrapper-2">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="map-items">
+                                <div class="googpemap">
+                                    <iframe src="https://maps.google.com/maps?q=Block%20C,%20Yamuna%20Vihar,%20Delhi,%20110053&t=&z=13&ie=UTF8&iwloc=&output=embed" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="contact-content">
+                                <h2>Request a Project Blueprint</h2>
+                                <p>
+                                    Fill out the details below, and our lead architects will get back to you with a strategic execution plan within 24 hours.
+                                </p>
+                                <form action="contact.php" id="contact-form" method="POST" class="contact-form-items">
+                                    <div class="row g-4">
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                            <div class="form-clt">
+                                                <span>Your name*</span>
+                                                <input type="text" name="name" id="name" placeholder="Your Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                            <div class="form-clt">
+                                                <span>Your Email*</span>
+                                                <input type="text" name="email" id="email" placeholder="Your Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
+                                            <div class="form-clt">
+                                                <span>Write Message*</span>
+                                                <textarea name="message" id="message" placeholder="Write Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7 wow fadeInUp" data-wow-delay=".9s">
+                                            <button type="submit" class="theme-btn">
+                                                Send Message <i class="fa-solid fa-arrow-right-long"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cta Section Start -->
+        <section class="cta-section section-padding pb-0">
+            <div class="rokect-shape float-bob-y">
+                <img src="assets/img/rokect.png" alt="img">
+            </div>
+            <div class="container">
+                <div class="cta-wrapper bg-cover" style="background-image: url('assets/img/cta-bg.jpg');">
+                    <div class="cta-img wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.3s">
+                        <img src="assets/img/cta-img.png" alt="img">
+                    </div>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                        Stay Connected With <br> Cutting Edge IT
+                    </h2>
+                    <div class="main-button wow fadeInUp" data-wow-delay=".5s">
+                        <a href="contact.php"> <span class="theme-btn"> talk TO  A SPECIALIST </span><span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <?php include_once 'includes/footer.php'; ?>
