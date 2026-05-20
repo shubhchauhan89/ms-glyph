@@ -7,7 +7,7 @@
                         <div class="single-footer-widget">
                             <div class="widget-head">
                                 <a href="index.php">
-                                    <img src="assets/img/logo/white-logo.svg" alt="img">
+                                    <img src="<?php echo $domain; ?>assets/img/logo/white-logo.svg" alt="img">
                                 </a>
                             </div>
                             <div class="footer-content">
@@ -68,7 +68,7 @@
                             <div class="recent-post-area">
                                 <div class="recent-post-items">
                                     <div class="thumb">
-                                        <img src="assets/img/news/pp1.jpg" alt="post-img">
+                                        <img src="<?php echo $domain; ?>assets/img/news/pp1.jpg" alt="post-img">
                                     </div>
                                     <div class="content">
                                         <ul class="post-date">
@@ -86,7 +86,7 @@
                                 </div>
                                 <div class="recent-post-items mb-0">
                                     <div class="thumb">
-                                        <img src="assets/img/news/pp2.jpg" alt="post-img">
+                                        <img src="<?php echo $domain; ?>assets/img/news/pp2.jpg" alt="post-img">
                                     </div>
                                     <div class="content">
                                         <ul class="post-date">
@@ -167,29 +167,29 @@
     </section>
 
     <!--<< All JS Plugins >>-->
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="<?php echo $domain; ?>assets/js/jquery-3.7.1.min.js"></script>
     <!--<< Viewport Js >>-->
-    <script src="assets/js/viewport.jquery.js"></script>
+    <script src="<?php echo $domain; ?>assets/js/viewport.jquery.js"></script>
     <!--<< Bootstrap Js >>-->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo $domain; ?>assets/js/bootstrap.bundle.min.js"></script>
     <!--<< Nice Select Js >>-->
-    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="<?php echo $domain; ?>assets/js/jquery.nice-select.min.js"></script>
     <!--<< Waypoints Js >>-->
-    <script src="assets/js/jquery.waypoints.js"></script>
+    <script src="<?php echo $domain; ?>assets/js/jquery.waypoints.js"></script>
     <!--<< Counterup Js >>-->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="<?php echo $domain; ?>assets/js/jquery.counterup.min.js"></script>
     <!--<< Swiper Slider Js >>-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="<?php echo $domain; ?>assets/js/swiper-bundle.min.js"></script>
     <!--<< MeanMenu Js >>-->
-    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="<?php echo $domain; ?>assets/js/jquery.meanmenu.min.js"></script>
     <!--<< Magnific Popup Js >>-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="<?php echo $domain; ?>assets/js/jquery.magnific-popup.min.js"></script>
     <!--<< Wow Animation Js >>-->
-    <script src="assets/js/wow.min.js"></script>
+    <script src="<?php echo $domain; ?>assets/js/wow.min.js"></script>
     <!--<< Circle Progress Js >>-->
-    <script src="assets/js/circle-progress.js"></script>
+    <script src="<?php echo $domain; ?>assets/js/circle-progress.js"></script>
     <!--<< Main.js >>-->
-    <script src="assets/js/main.js"></script>
+    <script src="<?php echo $domain; ?>assets/js/main.js"></script>
 </body>
 
 </html>

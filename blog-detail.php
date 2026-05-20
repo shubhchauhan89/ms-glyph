@@ -6,12 +6,12 @@ include_once 'includes/header.php';
 ?>
 
         <!-- Breadcrumb Section Start -->
-        <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb.jpg');">
+        <div class="breadcrumb-wrapper bg-cover" style="background-image: url('<?php echo $domain; ?>assets/img/breadcrumb.jpg');">
             <div class="left-shape">
-                <img src="assets/img/breadcrumb-shape.png" alt="img">
+                <img src="<?php echo $domain; ?>assets/img/breadcrumb-shape.png" alt="img">
             </div>
             <div class="right-shape">
-                <img src="assets/img/breadcrumb-shape-2.png" alt="img">
+                <img src="<?php echo $domain; ?>assets/img/breadcrumb-shape-2.png" alt="img">
             </div>
             <div class="container">
                 <div class="page-heading">
@@ -44,7 +44,7 @@ include_once 'includes/header.php';
                             <div class="news-post-details">
                                 <div class="single-news-post">
                                     <div class="post-featured-thumb">
-                                        <img src="assets/img/news/details-1.jpg" alt="">
+                                        <img src="<?php echo $domain; ?>assets/img/news/details-1.jpg" alt="">
                                     </div>
                                     <div class="post-content">
                                         <ul class="post-list d-flex align-items-center">
@@ -74,12 +74,12 @@ include_once 'includes/header.php';
                                         <div class="row g-4">
                                             <div class="col-lg-6">
                                                 <div class="details-image">
-                                                    <img src="assets/img/news/details-2.jpg" alt="img">
+                                                    <img src="<?php echo $domain; ?>assets/img/news/details-2.jpg" alt="img">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="details-image">
-                                                    <img src="assets/img/news/details-3.jpg" alt="img">
+                                                    <img src="<?php echo $domain; ?>assets/img/news/details-3.jpg" alt="img">
                                                 </div>
                                             </div>
                                         </div>
@@ -122,7 +122,7 @@ include_once 'includes/header.php';
                                     </div>
                                     <div class="blog-single-comment d-flex gap-4 pt-4 pb-5">
                                         <div class="image">
-                                            <img src="assets/img/news/comment-1.png" alt="image">
+                                            <img src="<?php echo $domain; ?>assets/img/news/comment-1.png" alt="image">
                                         </div>
                                         <div class="content">
                                             <div class="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
@@ -139,7 +139,7 @@ include_once 'includes/header.php';
                                     </div>
                                     <div class="blog-single-comment d-flex gap-4 pt-4 pb-5">
                                         <div class="image">
-                                            <img src="assets/img/news/comment-2.png" alt="image">
+                                            <img src="<?php echo $domain; ?>assets/img/news/comment-2.png" alt="image">
                                         </div>
                                         <div class="content">
                                             <div class="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
@@ -221,7 +221,7 @@ include_once 'includes/header.php';
                                     <div class="recent-post-area">
                                         <div class="recent-items">
                                             <div class="recent-thumb">
-                                                <img src="assets/img/news/pp3.jpg" alt="img">
+                                                <img src="<?php echo $domain; ?>assets/img/news/pp3.jpg" alt="img">
                                             </div>
                                             <div class="recent-content">
                                                 <ul>
@@ -239,7 +239,7 @@ include_once 'includes/header.php';
                                         </div>
                                         <div class="recent-items">
                                             <div class="recent-thumb">
-                                                <img src="assets/img/news/pp4.jpg" alt="img">
+                                                <img src="<?php echo $domain; ?>assets/img/news/pp4.jpg" alt="img">
                                             </div>
                                             <div class="recent-content">
                                                 <ul>
@@ -257,7 +257,7 @@ include_once 'includes/header.php';
                                         </div>
                                         <div class="recent-items">
                                             <div class="recent-thumb">
-                                                <img src="assets/img/news/pp5.jpg" alt="img">
+                                                <img src="<?php echo $domain; ?>assets/img/news/pp5.jpg" alt="img">
                                             </div>
                                             <div class="recent-content">
                                                 <ul>
@@ -303,12 +303,12 @@ include_once 'includes/header.php';
         <!-- Cta Section Start -->
         <section class="cta-section section-padding pb-0">
             <div class="rokect-shape float-bob-y">
-                <img src="assets/img/rokect.png" alt="img">
+                <img src="<?php echo $domain; ?>assets/img/rokect.png" alt="img">
             </div>
             <div class="container">
-                <div class="cta-wrapper bg-cover" style="background-image: url('assets/img/cta-bg.jpg');">
+                <div class="cta-wrapper bg-cover" style="background-image: url('<?php echo $domain; ?>assets/img/cta-bg.jpg');">
                     <div class="cta-img wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                        <img src="assets/img/cta-img.png" alt="img">
+                        <img src="<?php echo $domain; ?>assets/img/cta-img.png" alt="img">
                     </div>
                     <h2 class="wow fadeInUp" data-wow-delay=".3s">
                         Stay Connected With <br> Cutting Edge IT

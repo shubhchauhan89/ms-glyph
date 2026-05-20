@@ -1,9 +1,9 @@
 <?php
 // Database configuration
 $dbHost     = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName     = "ms_glyph";
+$dbUsername = "u142085228_msglyph";
+$dbPassword = "Shubh@8937";
+$dbName     = "u142085228_msglyph";
 
 
 // Create database connection

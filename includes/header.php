@@ -95,7 +95,7 @@ foreach ($categorySegments as $categorySegment) {
     <meta property="og:title" content="MS Glyph - Precision in Every Pixel.">
     <meta property="og:description"
         content="Technical architecture meets creative power. Discover our integrated SEO, design, and translation solutions.">
-    <meta property="og:image" content="assets/img/logo/og-image.jpg">
+    <meta property="og:image" content="<?php echo $domain; ?>assets/img/logo/og-image.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -103,27 +103,27 @@ foreach ($categorySegments as $categorySegment) {
     <meta name="twitter:title" content="MS Glyph - Precision in Every Pixel.">
     <meta name="twitter:description"
         content="Technical architecture meets creative power. Discover our integrated SEO, design, and translation solutions.">
-    <meta name="twitter:image" content="assets/img/logo/og-image.jpg">
+    <meta name="twitter:image" content="<?php echo $domain; ?>assets/img/logo/og-image.jpg">
 
 <?php 
     // 1. DYNAMIC CATEGORY HANDLING
     if (!empty($currentCategorySegment)) { 
         if ($currentCategorySegment === 'blog-category') { ?>
-            <title><?php echo $categoryTitle; ?> Articles & Insights | IBP Web Tech</title>
-            <meta name="keywords" content="<?php echo strtolower($categoryTitle); ?>, blog, digital marketing updates, tech tips">
-            <meta name="description" content="Explore our professional guides, case studies, and strategic trends covering <?php echo $categoryTitle; ?> to grow your business online.">
+            <title><?php echo $categoryTitle; ?> Design & Editorial Insights | MS Glyph</title>
+            <meta name="keywords" content="<?php echo strtolower($categoryTitle); ?>, graphic design blog, branding strategy, asset localization updates">
+            <meta name="description" content="Explore professional visual communication guides, layout composition case studies, and corporate branding trends covering <?php echo $categoryTitle; ?>.">
             <link rel="canonical" href="<?php echo $domain . 'blog-category/' . $categorySlug; ?>" />
 
         <?php } elseif ($currentCategorySegment === 'service-category') { ?>
-            <title>Professional <?php echo $categoryTitle; ?> Services India | IBP Web Tech</title>
-            <meta name="keywords" content="<?php echo strtolower($categoryTitle); ?> services, specialized web solutions, custom deployment">
-            <meta name="description" content="Scale your enterprise architecture with our customized <?php echo $categoryTitle; ?> solutions. Built for maximum security, speed, and conversion efficiency.">
+            <title>Bespoke <?php echo $categoryTitle; ?> Studio Services | MS Glyph</title>
+            <meta name="keywords" content="<?php echo strtolower($categoryTitle); ?> services, premium graphic layouts, high-fidelity visual assets, editorial workflows">
+            <meta name="description" content="Elevate your corporate visual positioning with our customized <?php echo $categoryTitle; ?> solutions. Engineered for absolute layout precision and market authority.">
             <link rel="canonical" href="<?php echo $domain . 'service-category/' . $categorySlug; ?>" />
 
         <?php } elseif ($currentCategorySegment === 'product-category') { ?>
-            <title>Premium <?php echo $categoryTitle; ?> Layouts & Digital Assets</title>
-            <meta name="keywords" content="buy <?php echo strtolower($categoryTitle); ?>, commercial digital templates, web layouts">
-            <meta name="description" content="Browse ready-to-deploy development structures matching <?php echo $categoryTitle; ?> configurations. Built to industry-best design standards.">
+            <title>Premium <?php echo $categoryTitle; ?> Slide Templates & Corporate Design Assets</title>
+            <meta name="keywords" content="buy premium <?php echo strtolower($categoryTitle); ?> templates, presentation slide layouts, vector graphics kits">
+            <meta name="description" content="Browse our curated catalog of pristine, ready-to-customize presentation layouts and vector design assets matching <?php echo $categoryTitle; ?> configurations.">
             <link rel="canonical" href="<?php echo $domain . 'product-category/' . $categorySlug; ?>" />
         <?php } 
 
@@ -131,78 +131,78 @@ foreach ($categorySegments as $categorySegment) {
     } else {
 
         if ($pageName === "index.php" || $pageName === "") { ?>
-            <title>Best Website Designing & SEO Company in Indirapuram Ghaziabad | <?php echo htmlspecialchars($row["site_name"]); ?></title>
-            <meta name="keywords" content="website design company indirapuram ghaziabad, website design agency indirapuram ghaziabad, best seo services company in indirapuram, web development ghaziabad">
-            <meta name="description" content="MS Glyph is a premier digital agency providing high-ticket design, technical SEO, and global content solutions. Precision-driven execution for consultants and brands.">
+            <title>Premium Graphic Design & Corporate Branding Studio Delhi NCR | <?php echo htmlspecialchars($row["site_name"]); ?></title>
+            <meta name="keywords" content="graphic design studio delhi ncr, corporate branding agency, corporate presentation design, product packaging design, professional translation workflows, proofreading services">
+            <meta name="description" content="MS Glyph is a premier creative studio delivering bespoke graphic design, identity systems, elite presentation layouts, and flawless localization workflows for global leaders.">
             <link rel="canonical" href="<?php echo $domain; ?>index.php" />
         
         <?php } elseif ($pageName === "about.php") { ?>
-            <title>About Us | Professional Web Design & SEO Experts Ghaziabad</title>
-            <meta name="keywords" content="about ibp web tech, website designing agency ghaziabad, professional web developers indirapuram, seo experts delhi ncr">
-            <meta name="description" content="Learn about IBP Web Tech, our mission, and our expert team. We are a dedicated digital agency helping businesses scale through custom web development and result-driven SEO.">
+            <title>Our Studio | Elite Graphic Design & Editorial Partners Delhi NCR</title>
+            <meta name="keywords" content="about ms glyph, professional graphic designers delhi ncr, corporate branding experts, silent execution arm design, typography localization">
+            <meta name="description" content="Learn about MS Glyph, our structural design philosophy, and rigorous quality standards. We serve as the definitive silent execution partner for consultants and global brands.">
             <link rel="canonical" href="<?php echo $domain; ?>about.php" />
         
         <?php } elseif ($pageName === "service.php") { ?>
-            <title>Custom Web Development & Professional SEO Services India</title>
-            <meta name="keywords" content="web development services india, corporate website design, professional seo packages, ecommerce website design ghaziabad">
-            <meta name="description" content="Explore our premium web solutions. From responsive business website design and e-commerce development to data-driven SEO strategies that maximize your ROI.">
+            <title>Bespoke Graphic Design, Corporate Branding & Asset Localization Services</title>
+            <meta name="keywords" content="graphic design services, brand identity packages, pitch deck layout design, packaging design studio, corporate document proofreading">
+            <meta name="description" content="Explore our elite creative pillars. From signature brand identity guides and digital UI graphics to high-impact educational presentation slides and pristine translation workflows.">
             <link rel="canonical" href="<?php echo $domain; ?>service.php" />
         
         <?php } elseif ($pageName === "blog.php") { ?>
-            <title>Web Design, SEO & Tech Insights Blog | IBP Web Tech</title>
-            <meta name="keywords" content="web design blog, latest seo tips, digital marketing insights, business website strategies">
-            <meta name="description" content="Stay updated with the IBP Web Tech blog. Read expert tips, tutorials, and insights on web development, search engine optimization, and online business growth.">
+            <title>Creative Strategy, Typographic & Editorial Insights Blog | MS Glyph</title>
+            <meta name="keywords" content="graphic design blog, brand identity strategy, presentation layout guides, vector composition tips, translation accuracy insights">
+            <meta name="description" content="Stay informed with the MS Glyph blog. Read expert perspectives, case analyses, and tutorials on corporate presentation design, branding aesthetics, and cultural localization.">
             <link rel="canonical" href="<?php echo $domain; ?>blog.php" />
         
         <?php } elseif ($pageName === "shop.php") { ?>
-            <title>Ready-Made Website Templates & Digital Solutions</title>
-            <meta name="keywords" content="buy website templates, premium web layouts, ready-made business websites, digital assets for business">
-            <meta name="description" content="Browse our collection of conversion-optimized website templates and pre-built digital solutions designed to launch your business online instantly.">
+            <title>Premium Presentation Slide Templates & Executive Graphic Assets</title>
+            <meta name="keywords" content="buy corporate ppt templates, professional presentation slides, high-end vector kits, school project presentation layout">
+            <meta name="description" content="Access our exclusive marketplace of conversion-engineered corporate pitch decks, educational presentation slide layouts, and pristine digital graphic assets.">
             <link rel="canonical" href="<?php echo $domain; ?>shop.php" />
         
         <?php } elseif ($pageName === "pricing.php") { ?>
-            <title>Affordable Web Design & SEO Packages | Transparent Pricing</title>
-            <meta name="keywords" content="website design cost ghaziabad, seo package pricing, web development packages india, affordable digital marketing plans">
-            <meta name="description" content="Check out our budget-friendly web design and SEO packages. Clear, transparent pricing models built to scale small businesses and corporate enterprises.">
+            <title>Premium Creative Briefs & Studio Retainer Packages | Transparent Pricing</title>
+            <meta name="keywords" content="graphic design studio retainer cost, brand identity package pricing delhi ncr, corporate presentation design rates">
+            <meta name="description" content="Review transparent project packages and structural monthly studio retainer configurations meticulously tailored for high-ticket consultants and corporate enterprises.">
             <link rel="canonical" href="<?php echo $domain; ?>pricing.php" />
         
         <?php } elseif ($pageName === "portfolio.php") { ?>
-            <title>Our Work | Web Development & SEO Case Studies</title>
-            <meta name="keywords" content="web design portfolio, live website examples, seo success stories, client case studies ibp web tech">
-            <meta name="description" content="Explore our portfolio of successful projects. See how we have helped companies across India achieve stunning web architecture and top-tier search engine rankings.">
+            <title>Our Portfolio | Case Studies in Visual Craft & Editorial Precision</title>
+            <meta name="keywords" content="graphic design portfolio delhi ncr, brand identity system examples, corporate pitch deck records, professional localization case studies">
+            <meta name="description" content="Explore our visual showcase. Discover how MS Glyph has helped elite companies secure absolute aesthetic authority and linguistic clarity across print and digital media.">
             <link rel="canonical" href="<?php echo $domain; ?>portfolio.php" />
         
         <?php } elseif ($pageName === "contact.php") { ?>
-            <title>Contact IBP Web Tech | Get a Free Website & SEO Consultation</title>
-            <meta name="keywords" content="contact web design company ghaziabad, hire seo agency indirapuram, web development quote, digital marketing consultation">
-            <meta name="description" content="Ready to transform your digital presence? Contact IBP Web Tech today for a free website audit or SEO consultation. Let's scale your business together.">
+            <title>Brief Our Studio | Secure Your Silent Creative Execution Arm</title>
+            <meta name="keywords" content="hire graphic design studio delhi ncr, brief ms glyph, corporate design firm quote, request translation services">
+            <meta name="description" content="Ready to transform your brand architecture and achieve cross-border linguistic precision? Connect with MS Glyph to brief our creative studio on your next project.">
             <link rel="canonical" href="<?php echo $domain; ?>contact.php" />
         <?php } 
     } 
 ?>
 
     <!--<< Favcion >>-->
-    <link rel="shortcut icon" href="assets/img/logo/favicon.svg">
+    <link rel="shortcut icon" href="<?php echo $domain; ?>assets/img/logo/favicon.svg">
     <!--<< Bootstrap min.css >>-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/bootstrap.min.css">
     <!--<< All Min Css >>-->
-    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/all.min.css">
     <!--<< Animate.css >>-->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/animate.css">
     <!--<< Icomoon.css >>-->
-    <link rel="stylesheet" href="assets/css/icomoon.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/icomoon.css">
     <!--<< Magnific Popup.css >>-->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/magnific-popup.css">
     <!--<< MeanMenu.css >>-->
-    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/meanmenu.css">
     <!--<< Swiper Bundle.css >>-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/swiper-bundle.min.css">
     <!--<< Nice Select.css >>-->
-    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/nice-select.css">
     <!--<< Color.css >>-->
-    <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/color.css">
     <!--<< Main.css >>-->
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/main.css">
 </head>
 
 <body>
@@ -266,7 +266,7 @@ foreach ($categorySegments as $categorySegment) {
                     <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                         <div class="offcanvas__logo">
                             <a href="index.php">
-                                <img src="assets/img/logo/black-logo.svg" alt="logo-img">
+                                <img src="<?php echo $domain; ?>assets/img/logo/black-logo.svg" alt="logo-img">
                             </a>
                         </div>
                         <div class="offcanvas__close">
@@ -343,7 +343,7 @@ foreach ($categorySegments as $categorySegment) {
                 <div class="header-main">
                     <div class="logo">
                         <a href="index.php" class="header-logo-3">
-                            <img src="assets/img/logo/black-logo.svg" alt="logo-img">
+                            <img src="<?php echo $domain; ?>assets/img/logo/black-logo.svg" alt="logo-img">
                         </a>
                     </div>
                     <div class="mean__menu-wrapper">

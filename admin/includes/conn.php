@@ -4,11 +4,11 @@
 
 $host = "localhost";
 
-$user = "root";
+$user = "u142085228_msglyph";
 
-$password = "";
+$password = "Shubh@8937";
 
-$dbname = "ms_glyph";
+$dbname = "u142085228_msglyph";
 
 
 
