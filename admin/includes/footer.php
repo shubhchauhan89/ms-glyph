@@ -9,7 +9,7 @@ $resultt = mysqli_query($con, "SELECT * FROM settings where id='1'");
 $roww = mysqli_fetch_array($resultt);
 $edit = $roww['id'];
 ?>
-<footer class="footer">MS Glyph Studio v1.0 | Standardized for Delhi NCR Authority.</footer>
+<footer class="footer">© 2024 <?php echo htmlspecialchars($roww["site_name"]); ?> by Mannatthemes.</footer>
 </div><!-- End Right content here -->
 </div><!-- END wrapper -->
 

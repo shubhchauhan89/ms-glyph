@@ -14,13 +14,13 @@ include_once 'includes/header.php';
             <div class="row g-4 justify-content-between align-items-center">
                 <div class="col-lg-6">
                     <div class="hero-content">
-                        <h6 class="wow fadeInUp">MS Glyph Digital Agency</h6>
+                        <h6 class="wow fadeInUp">MS Glyph Designing Agency</h6>
                         <h1 class="wow fadeInUp" data-wow-delay=".3s">
-                            Precision in Every <span>Pixel.</span>Power in Every Word.
+                            Precision in Every <span>Pixel.</span> Power in Every Word.
                         </h1>
                         <p class="wow fadeInUp" data-wow-delay=".5s">
-                            Providing precision-driven digital solutions for leaders across Delhi NCR. We turn your
-                            brand's vision into a precisely executed digital reality.
+                            MS Glyph bridges the gap between stunning visual design and flawless multi-lingual communication.
+                             Powered by Adobe Creative Cloud, we design and refine assets that command attention.
                         </p>
                         <div class="hero-button">
                             <div class="main-button wow fadeInUp" data-wow-delay=".3s">
@@ -66,7 +66,7 @@ include_once 'includes/header.php';
                     ['title' => 'Social Media & Ad Creatives', 'category_list' => 'Instagram Posts, Facebook Ads, YouTube Thumbnails, Story & Reel Covers, and Social Media Banners.', 'icon_class' => '06.png', 'slug' => 'social-media-ad-creatives'],
                     ['title' => 'Print & Marketing Materials', 'category_list' => 'Posters, Flyers, Brochures, Menu Cards, Packaging Design, Product Catalogs, and Infographics.', 'icon_class' => '01.png', 'slug' => 'print-marketing-materials'],
                     ['title' => 'Presentation & Educational Design', 'category_list' => 'Specialized PPT Design for School Projects, Coaching Center slides, and Corporate Presentations.', 'icon_class' => '05.png', 'slug' => 'presentation-educational-design'],
-                    ['title' => 'Technical SEO & Development', 'category_list' => 'Comprehensive SEO services and Website Designing focused on speed, authority, and ranking.', 'icon_class' => '06.png', 'slug' => 'technical-seo-web-dev']
+                    ['title' => 'Localization & Editorial Services', 'category_list' => 'Professional Translation Services, Document & Copy Proofreading.', 'icon_class' => '06.png', 'slug' => 'technical-seo-web-dev']
                 ];
 
                 if (isset($agency_blueprint_conn) && $agency_blueprint_conn !== null) {
@@ -209,56 +209,62 @@ include_once 'includes/header.php';
         <!-- Marquee 1: Focus on Services & Scope -->
         <div class="mycustom-marque style-2 bg-2">
             <div class="scrolling-wrap">
+                <!-- Group 1 -->
                 <div class="comm">
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">PRECISE WEB DESIGN</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">HIGH-TICKET SEO</div>
+                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">IDENTITY & LOGO DESIGN</div>
+                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">DIGITAL UI GRAPHICS</div>
                     <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">BRAND ARCHITECTURE</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">GLOBAL TRANSLATION</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">VISUAL PSYCHOLOGY</div>
+                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">FLAWLESS TRANSLATION</div>
+                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">HIGH-IMPACT PRESENTATIONS</div>
                 </div>
+                <!-- Group 2 -->
                 <div class="comm">
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">PRECISE WEB DESIGN</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">HIGH-TICKET SEO</div>
+                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">IDENTITY & LOGO DESIGN</div>
+                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">DIGITAL UI GRAPHICS</div>
                     <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">BRAND ARCHITECTURE</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">GLOBAL TRANSLATION</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">VISUAL PSYCHOLOGY</div>
+                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">FLAWLESS TRANSLATION</div>
+                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">HIGH-IMPACT PRESENTATIONS</div>
                 </div>
+                <!-- Group 3 -->
                 <div class="comm">
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">PRECISE WEB DESIGN</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">HIGH-TICKET SEO</div>
+                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">IDENTITY & LOGO DESIGN</div>
+                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">DIGITAL UI GRAPHICS</div>
                     <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">BRAND ARCHITECTURE</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">GLOBAL TRANSLATION</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">VISUAL PSYCHOLOGY</div>
+                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">FLAWLESS TRANSLATION</div>
+                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">HIGH-IMPACT PRESENTATIONS</div>
                 </div>
             </div>
         </div>
 
         <!-- Marquee 2: Focus on Brand Identity & Geography -->
-        <div class="mycustom-marque style-3 bg-3">
-            <div class="scrolling-wrap">
-                <div class="comm">
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">MS GLYPH</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">DELHI NCR POWER</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">SILENT EXECUTION ARM</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">PRECISION IN PIXELS</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">POWER IN WORDS</div>
-                </div>
-                <div class="comm">
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">MS GLYPH</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">DELHI NCR POWER</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">SILENT EXECUTION ARM</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">PRECISION IN PIXELS</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">POWER IN WORDS</div>
-                </div>
-                <div class="comm">
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">MS GLYPH</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">DELHI NCR POWER</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">SILENT EXECUTION ARM</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">PRECISION IN PIXELS</div>
-                    <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">POWER IN WORDS</div>
+            <div class="mycustom-marque style-3 bg-3">
+                <div class="scrolling-wrap">
+                    <!-- Group 1 -->
+                    <div class="comm">
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">MS GLYPH</div>
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">DELHI NCR CREATIVE STUDIO</div>
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">SILENT CREATIVE ARM</div>
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">PRECISION IN PIXELS</div>
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">FLAWLESS IN WORDS</div>
+                    </div>
+                    <!-- Group 2 -->
+                    <div class="comm">
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">MS GLYPH</div>
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">DELHI NCR CREATIVE STUDIO</div>
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">SILENT CREATIVE ARM</div>
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">PRECISION IN PIXELS</div>
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">FLAWLESS IN WORDS</div>
+                    </div>
+                    <!-- Group 3 -->
+                    <div class="comm">
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">MS GLYPH</div>
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">DELHI NCR CREATIVE STUDIO</div>
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">SILENT CREATIVE ARM</div>
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">PRECISION IN PIXELS</div>
+                        <div class="cmn-textslide"><img src="assets/img/star-2.png" alt="img">FLAWLESS IN WORDS</div>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
 
     <!-- Case Studies Section Start -->
@@ -371,149 +377,37 @@ include_once 'includes/header.php';
         </div>
     </section>
 
-    <!-- Team Section Start -->
-    <section class="team-section-3 fix section-padding">
-        <div class="container">
-            <div class="section-title-area">
-                <div class="section-title">
-                    <div class="sub-title wow fadeInUp">
-                        <span>OUR expert</span>
-                    </div>
-                    <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                        Use SEO to Drive Growth <br> at Your Business
-                    </h2>
-                </div>
-                <div class="main-button wow fadeInUp" data-wow-delay=".5s">
-                    <a href="team.php"> <span class="theme-btn">EXPLORE MORE </span><span class="arrow-btn"><i
-                                class="fa-regular fa-arrow-up-right"></i></span></a>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                    <div class="team-card-items">
-                        <div class="team-image">
-                            <img src="assets/img/team/01.jpg" alt="img">
-                        </div>
-                        <div class="team-content">
-                            <h3><a href="team-details.php">Reful Miya</a></h3>
-                            <p>CO-Leader</p>
-                        </div>
-                        <div class="icon-shape">
-                            <img src="assets/img/team/icon-shape.png" alt="img">
-                            <div class="social-profile">
-                                <ul>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                                <span class="plus-btn"><i class="fas fa-share-alt"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                    <div class="team-card-items">
-                        <div class="team-image">
-                            <img src="assets/img/team/02.jpg" alt="img">
-                        </div>
-                        <div class="team-content">
-                            <h3><a href="team-details.php">Shikhon Islam</a></h3>
-                            <p>Web Developer</p>
-                        </div>
-                        <div class="icon-shape">
-                            <img src="assets/img/team/icon-shape.png" alt="img">
-                            <div class="social-profile">
-                                <ul>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                                <span class="plus-btn"><i class="fas fa-share-alt"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-                    <div class="team-card-items">
-                        <div class="team-image">
-                            <img src="assets/img/team/03.jpg" alt="img">
-                        </div>
-                        <div class="team-content">
-                            <h3><a href="team-details.php">Abdullah Islam</a></h3>
-                            <p>Web Development</p>
-                        </div>
-                        <div class="icon-shape">
-                            <img src="assets/img/team/icon-shape.png" alt="img">
-                            <div class="social-profile">
-                                <ul>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                                <span class="plus-btn"><i class="fas fa-share-alt"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
-                    <div class="team-card-items">
-                        <div class="team-image">
-                            <img src="assets/img/team/04.jpg" alt="img">
-                        </div>
-                        <div class="team-content">
-                            <h3><a href="team-details.php">Leslie Alexander</a></h3>
-                            <p>Nursing Assistant</p>
-                        </div>
-                        <div class="icon-shape">
-                            <img src="assets/img/team/icon-shape.png" alt="img">
-                            <div class="social-profile">
-                                <ul>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                                <span class="plus-btn"><i class="fas fa-share-alt"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Marque Section Start -->
     <div class="marquee-section section-padding pt-0">
         <div class="mycustom-marque theme-blue-bg">
             <div class="scrolling-wrap">
+                <!-- Group 1 -->
                 <div class="comm">
-                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">Business Grow</div>
-                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">Digital Marketing </div>
-                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">SEO Marketing</div>
-                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">Email Marketingimg</div>
+                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">GRAPHIC DESIGNING</div>
+                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">EDITORIAL</div>
+                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">BRAND IDENTITY</div>
+                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">LOCALIZATION SERVICES</div>
                 </div>
+                <!-- Group 2 -->
                 <div class="comm">
-                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">Business Grow</div>
-                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">Digital Marketing </div>
-                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">SEO Marketing</div>
-                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">Email Marketingimg</div>
+                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">GRAPHIC DESIGNING</div>
+                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">EDITORIAL</div>
+                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">BRAND IDENTITY</div>
+                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">LOCALIZATION SERVICES</div>
                 </div>
+                <!-- Group 3 -->
                 <div class="comm">
-                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">Business Grow</div>
-                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">Digital Marketing </div>
-                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">SEO Marketing</div>
-                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">Email Marketingimg</div>
+                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">GRAPHIC DESIGNING</div>
+                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">EDITORIAL</div>
+                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">BRAND IDENTITY</div>
+                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">LOCALIZATION SERVICES</div>
                 </div>
+                <!-- Group 4 -->
                 <div class="comm">
-                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">Business Grow</div>
-                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">Digital Marketing </div>
-                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">SEO Marketing</div>
-                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">Email Marketingimg</div>
+                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">GRAPHIC DESIGNING</div>
+                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">EDITORIAL</div>
+                    <div class="cmn-textslide stroke-text"><img src="assets/img/has.png" alt="img">BRAND IDENTITY</div>
+                    <div class="cmn-textslide"><img src="assets/img/has.png" alt="img">LOCALIZATION SERVICES</div>
                 </div>
             </div>
         </div>
@@ -542,27 +436,26 @@ include_once 'includes/header.php';
                                     <span>Why MS Glyph?</span>
                                 </div>
                                 <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                                    Your Silent Partner in Digital Excellence
+                                    Your Partner in Creative & Editorial Excellence
                                 </h2>
                             </div>
                             <p class="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
-                                We don't just provide services; we act as a high-precision execution arm for your brand.
-                                From the technical architecture of a website to the nuance of a translated sentence, we
-                                focus on the small details that drive big profits. We strip away the jargon and deliver
-                                tangible growth.
+                                We don't just build assets; we act as a high-precision creative and linguistic execution arm for your enterprise. 
+                                From the initial psychology of a custom brand identity to the complex composition of corporate presentation decks 
+                                and global packaging, we master the subtle design details that command market authority. 
+                                We replace generic formatting with elite visual communication.
                             </p>
                             <div class="icon-items-area">
                                 <div class="icon-items wow fadeInUp" data-wow-delay=".3s">
                                     <div class="content mt-0">
-                                        <h3>Precision-First Approach</h3>
-                                        <p>Every pixel and every word is checked for accuracy and brand alignment.</p>
+                                        <h3>Adobe-Powered Visual Craft</h3>
+                                        <p>We leverage industry-standard Adobe creative tools to build pixel-perfect digital UI graphics, social layouts, and premium physical print collateral.</p>
                                     </div>
                                 </div>
                                 <div class="icon-items wow fadeInUp" data-wow-delay=".5s">
                                     <div class="content mt-0">
-                                        <h3>Global Readiness</h3>
-                                        <p>With our integrated translation and proofreading services, we make sure your
-                                            brand is ready for international markets.</p>
+                                        <h3>Flawless Localization</h3>
+                                        <p>With our native translation and meticulous proofreading workflows, we ensure your promotional materials and presentation slides are culturally optimized for any demographic.</p>
                                     </div>
                                 </div>
                             </div>
@@ -581,10 +474,10 @@ include_once 'includes/header.php';
                     <div class="content">
                         <div class="section-title">
                             <div class="sub-title bg-color-3 wow fadeInUp">
-                                <span>Free Marketing</span>
+                                <span>Studio Insights</span>
                             </div>
                             <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
-                                Free digital marketing
+                                Elevate Your Visual & Verbal Presence
                             </h2>
                         </div>
                         <ul class="list mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
@@ -595,7 +488,7 @@ include_once 'includes/header.php';
                                         d="M7.38397 14.1797C7.34153 14.1797 7.29954 14.171 7.26066 14.1539C7.22178 14.1369 7.18683 14.1121 7.15803 14.0809L1.06612 7.49119C1.02551 7.44726 0.99859 7.39244 0.988651 7.33344C0.978712 7.27445 0.986187 7.21384 1.01016 7.15902C1.03414 7.10421 1.07357 7.05758 1.12364 7.02483C1.17371 6.99208 1.23223 6.97464 1.29206 6.97464H4.22437C4.26839 6.97464 4.31191 6.98409 4.35197 7.00234C4.39204 7.0206 4.42772 7.04723 4.45661 7.08045L6.49255 9.42273C6.71258 8.95239 7.13852 8.16925 7.88597 7.21497C8.99095 5.8042 11.0463 3.7294 14.5627 1.85642C14.6307 1.82023 14.7097 1.81083 14.7843 1.83009C14.8588 1.84936 14.9235 1.89587 14.9654 1.96046C15.0073 2.02504 15.0235 2.103 15.0108 2.17894C14.998 2.25488 14.9573 2.32328 14.8966 2.37064C14.8831 2.38113 13.5273 3.44882 11.967 5.40448C10.5309 7.20417 8.62191 10.1469 7.68255 13.946C7.66605 14.0128 7.62767 14.0721 7.57354 14.1144C7.5194 14.1568 7.45263 14.1799 7.38388 14.1799L7.38397 14.1797Z"
                                         fill="white" />
                                 </svg>
-                                Digital marketing
+                                Bespoke Branding & Graphic Design
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
@@ -604,7 +497,7 @@ include_once 'includes/header.php';
                                         d="M7.38397 14.1797C7.34153 14.1797 7.29954 14.171 7.26066 14.1539C7.22178 14.1369 7.18683 14.1121 7.15803 14.0809L1.06612 7.49119C1.02551 7.44726 0.99859 7.39244 0.988651 7.33344C0.978712 7.27445 0.986187 7.21384 1.01016 7.15902C1.03414 7.10421 1.07357 7.05758 1.12364 7.02483C1.17371 6.99208 1.23223 6.97464 1.29206 6.97464H4.22437C4.26839 6.97464 4.31191 6.98409 4.35197 7.00234C4.39204 7.0206 4.42772 7.04723 4.45661 7.08045L6.49255 9.42273C6.71258 8.95239 7.13852 8.16925 7.88597 7.21497C8.99095 5.8042 11.0463 3.7294 14.5627 1.85642C14.6307 1.82023 14.7097 1.81083 14.7843 1.83009C14.8588 1.84936 14.9235 1.89587 14.9654 1.96046C15.0073 2.02504 15.0235 2.103 15.0108 2.17894C14.998 2.25488 14.9573 2.32328 14.8966 2.37064C14.8831 2.38113 13.5273 3.44882 11.967 5.40448C10.5309 7.20417 8.62191 10.1469 7.68255 13.946C7.66605 14.0128 7.62767 14.0721 7.57354 14.1144C7.5194 14.1568 7.45263 14.1799 7.38388 14.1799L7.38397 14.1797Z"
                                         fill="white" />
                                 </svg>
-                                ECO optimization
+                                Flawless Localization & Editorial Strategy
                             </li>
                         </ul>
                     </div>
@@ -660,16 +553,17 @@ include_once 'includes/header.php';
                     <img src="assets/img/testimonial/09.png" alt="img">
                 </div>
                 <div class="swiper testimonial-slider-2">
-                    <div class="swiper-wrapper">
+                   <div class="swiper-wrapper">
+                        <!-- Testimonial 1 -->
                         <div class="swiper-slide">
                             <div class="testimonial-content">
                                 <div class="icon">
                                     <img src="assets/img/testimonial/quote.png" alt="img">
                                 </div>
                                 <p>
-                                    MS Glyph didn't just build a website; they architected a digital authority. Their
-                                    precision in content and design transformed how my clients perceive my consulting
-                                    firm. Truly a silent execution partner.
+                                    MS Glyph didn't just refresh our logos; they built a complete brand identity system. Their 
+                                    precision in visual composition and executive presentation design completely transformed how 
+                                    enterprise clients perceive our consulting firm. They are our trusted, silent creative arm.
                                 </p>
                                 <div class="client-info">
                                     <div class="client-img">
@@ -682,16 +576,17 @@ include_once 'includes/header.php';
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- Testimonial 2 -->
                         <div class="swiper-slide">
                             <div class="testimonial-content">
                                 <div class="icon">
                                     <img src="assets/img/testimonial/quote.png" alt="img">
                                 </div>
                                 <p>
-                                    Dominating the Delhi NCR search results seemed impossible until we worked with MS
-                                    Glyph.
-                                    Their local SEO and ad creatives drove more foot traffic in three months than we saw
-                                    all last year.
+                                    Launching luxury properties across Delhi NCR requires absolute aesthetic perfection. MS Glyph 
+                                    delivered exceptional product catalogs, high-CTR digital ad creatives, and premium brochures 
+                                    that matched our high-end market positioning flawlessly. 
                                 </p>
                                 <div class="client-info">
                                     <div class="client-img">
@@ -704,16 +599,17 @@ include_once 'includes/header.php';
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- Testimonial 3 -->
                         <div class="swiper-slide">
                             <div class="testimonial-content">
                                 <div class="icon">
                                     <img src="assets/img/testimonial/quote.png" alt="img">
                                 </div>
                                 <p>
-                                    Their translation and proofreading services are flawless. They captured our brand
-                                    voice perfectly for international markets while maintaining the high-end design of
-                                    our
-                                    pitch decks.
+                                    Their integrated translation and proofreading services are spectacular. They captured our exact 
+                                    brand voice for international markets while simultaneously managing the complex Adobe-based 
+                                    layouts of our corporate pitch decks.
                                 </p>
                                 <div class="client-info">
                                     <div class="client-img">
@@ -740,30 +636,30 @@ include_once 'includes/header.php';
                 <div class="section-title-area">
                     <div class="section-title">
                         <div class="sub-title bg-color-3 wow fadeInUp">
-                            <span>Counter</span>
+                            <span>Studio Metrics</span>
                         </div>
                         <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
-                            Make your marketing <br> more effective
+                            Design that commands.
                         </h2>
                     </div>
                     <div class="counter-box-area">
                         <div class="counter-text wow fadeInUp" data-wow-delay=".3s">
                             <h2>
-                                <span class="count">19.4</span>K
+                                <span class="count">450</span>+
                             </h2>
-                            <p>Projects Delivered</p>
+                            <p>Brand Identities Built</p>
                         </div>
                         <div class="counter-text wow fadeInUp" data-wow-delay=".5s">
                             <h2>
-                                <span class="count">95.2</span>K
+                                <span class="count">12</span>K+
                             </h2>
-                            <p>Global Clients</p>
+                            <p>Creative Assets Crafted</p>
                         </div>
                         <div class="counter-text wow fadeInUp" data-wow-delay=".7s">
                             <h2>
-                                <span class="count">142.6</span>K
+                                <span class="count">100</span>%
                             </h2>
-                            <p>Creatives Crafted</p>
+                            <p>Linguistic Accuracy</p>
                         </div>
                     </div>
                 </div>
@@ -856,6 +752,7 @@ include_once 'includes/header.php';
     <!-- Cta Section Start -->
     <section class="cta-section section-padding pb-0">
         <div class="rokect-shape float-bob-y">
+            <!-- Tip: Consider swapping this rocket image asset later with a vector pen tool, glyph, or blueprint icon to match your new aesthetic -->
             <img src="assets/img/rokect.png" alt="img">
         </div>
         <div class="container">
@@ -864,10 +761,10 @@ include_once 'includes/header.php';
                     <img src="assets/img/cta-img.png" alt="img">
                 </div>
                 <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                    Stay Connected With <br> Cutting Edge IT
+                    Transform Your Brand With <br> Precision Design & Copy
                 </h2>
                 <div class="main-button wow fadeInUp" data-wow-delay=".5s">
-                    <a href="contact.php"> <span class="theme-btn"> talk TO A SPECIALIST </span><span
+                    <a href="contact.php"> <span class="theme-btn"> BRIEF OUR STUDIO </span><span
                             class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span></a>
                 </div>
             </div>

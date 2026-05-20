@@ -24,7 +24,7 @@ function scanDirectory($dir, $sitemap_domain) {
         $relativePath = str_replace($_SERVER['DOCUMENT_ROOT'], '', $filePath);
         
         // Exclude admin, includes, and assets folders
-        if (strpos($relativePath, '/admin/') !== false || strpos($relativePath, '/includes/') !== false || strpos($relativePath, 'rrnursing.ibpwebtech.com') !== false || strpos($relativePath, 'ucs.ibpwebtech.com') !== false || strpos($relativePath, '/assets/') !== false) {
+        if (strpos($relativePath, '/admin/') !== false || strpos($relativePath, '/includes/') !== false || strpos($relativePath, '/assets/') !== false) {
             continue;
         }
 
@@ -94,17 +94,10 @@ function excludeUrls($urls) {
         '/blog-detail.php', 
         '/product-detail.php', 
         '/service-detail.php',
-        '/default.php',
-        '/php.ini',
         '.htaccess',
         'mail.php',
         'view_count.txt',
         'error_log',
-        '/ibp',
-        '/vendor/',                     // Blocks Composer vendor files
-        '/node_modules/',               // Blocks Node packages
-        '/.git/',                       // Blocks Git files
-        '/tests/'
     ];
     return array_filter($urls, function($url) use ($excludeUrls) {
         foreach ($excludeUrls as $exclude) {
@@ -160,6 +153,7 @@ if (isset($_POST['generate_sitemap'])) {
 if (isset($_POST['add'])) {
     $site_name = $_POST['site_name'] ?? '';
     $phone = $_POST['phone'] ?? '';
+    $phone2 = $_POST['phone2'] ?? '';
     $email = $_POST['email'] ?? '';
     $footer_desc = $_POST['footer_desc'] ?? '';
     $address = $_POST['address'] ?? '';
@@ -208,6 +202,7 @@ if (isset($_POST['add'])) {
         $stmt = $con->prepare("INSERT INTO settings (site_name, phone, email, footer_desc, address, city, state, country, pin, header_logo, favicon_logo, footer_logo, facebook, twitter, linkedin, instagram, youtube, map) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssssssssssssssssss", $site_name, $phone, $email, $footer_desc, $address, $city, $state, $country, $pin, $header_logo, $favicon_logo, $footer_logo, $facebook, $twitter, $linkedin, $instagram, $youtube, $map);
         $stmt->execute();
+        $stmt->close();
 
         echo "<script>alert('Posted Successfully');</script>";
         echo "<script>window.location.href = 'setting.php'</script>";
@@ -215,6 +210,7 @@ if (isset($_POST['add'])) {
         $stmt = $con->prepare("UPDATE settings SET site_name=?, phone=?, email=?, footer_desc=?, address=?, city=?, state=?, country=?, pin=?, header_logo=?, favicon_logo=?, footer_logo=?, facebook=?, twitter=?, linkedin=?, instagram=?, youtube=?, map=? WHERE id=?");
         $stmt->bind_param("ssssssssssssssssssi", $site_name, $phone, $email, $footer_desc, $address, $city, $state, $country, $pin, $header_logo, $favicon_logo, $footer_logo, $facebook, $twitter, $linkedin, $instagram, $youtube, $map, $edit);
         $stmt->execute();
+        $stmt->close();
 
         echo "<script>alert('Updated Successfully');</script>";
         echo "<script>window.location.href = 'setting.php'</script>";

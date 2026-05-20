@@ -1,3 +1,81 @@
+<?php
+include 'admin/includes/conn.php';
+include 'admin/includes/db.php';
+
+// Check if the database connection is successful
+if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Check if the database selection is successful
+if (!mysqli_select_db($con, $dbname)) {
+    die("Failed to select database: " . mysqli_error($con));
+}
+
+$settings = mysqli_query($con, "SELECT * FROM settings WHERE id='1'");
+$row = mysqli_fetch_array($settings);
+
+// Function to get the page name from the URL
+function getPageName() {
+    return basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+}
+
+// Get the current page name
+$pageName = getPageName();
+
+// Parse the URL to get the path
+$url = $_SERVER['REQUEST_URI'];
+$path = parse_url($url, PHP_URL_PATH);
+
+// Explode the path by '/' to get individual segments
+$segments = explode('/', trim($path, '/'));
+
+// Initialize categoryTitle
+$categoryTitle = "";
+
+// Check if the URL contains specific segments and retrieve the category name
+$currentCategorySegment = "";
+$categorySlug = "";
+
+$categorySegments = ['blog-category', 'product-category', 'service-category'];
+foreach ($categorySegments as $categorySegment) {
+    if (in_array($categorySegment, $segments)) {
+        $key = array_search($categorySegment, $segments);
+        if (isset($segments[$key + 1])) {
+            $currentCategorySegment = $categorySegment;
+            $categorySlug = $segments[$key + 1];
+            $categoryTitle = ucwords(str_replace('-', ' ', $categorySlug));
+            break;
+        }
+    }
+}
+// // Function to set title based on page name
+// function getPageTitle($pageName, $categoryTitle) {
+    
+//     switch ($pageName) {
+//         case ($domain):
+//             return "Home";
+//         case "index.php":
+//             return "Home";
+//         case "about.php":
+//             return "About Us";
+//         case "service.php":
+//             return "Our Services";
+//         case "blog.php":
+//             return "Blog";
+//         case "pricing.php":
+//             return "Pricing";
+//         case "portfolio.php":
+//             return "Portfolio";
+//         case "contact.php":
+//             return "Contact Us";
+//             default:
+//             return $categoryTitle ? $categoryTitle : "Page Not Found";
+//     }
+// }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <!--<< Header Area >>-->
@@ -13,6 +91,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo $domain . $pageName; ?>">
     <meta property="og:title" content="MS Glyph - Precision in Every Pixel.">
     <meta property="og:description"
         content="Technical architecture meets creative power. Discover our integrated SEO, design, and translation solutions.">
@@ -20,13 +99,88 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<?php echo $domain . $pageName; ?>">
     <meta name="twitter:title" content="MS Glyph - Precision in Every Pixel.">
     <meta name="twitter:description"
         content="Technical architecture meets creative power. Discover our integrated SEO, design, and translation solutions.">
     <meta name="twitter:image" content="assets/img/logo/og-image.jpg">
 
-    <!-- ======== Page title ============ -->
-    <title><?php echo isset($page_title) ? htmlspecialchars($page_title) . " | " . htmlspecialchars($site_name) : htmlspecialchars($site_name) . " | Precision Digital Agency"; ?></title>
+<?php 
+    // 1. DYNAMIC CATEGORY HANDLING
+    if (!empty($currentCategorySegment)) { 
+        if ($currentCategorySegment === 'blog-category') { ?>
+            <title><?php echo $categoryTitle; ?> Articles & Insights | IBP Web Tech</title>
+            <meta name="keywords" content="<?php echo strtolower($categoryTitle); ?>, blog, digital marketing updates, tech tips">
+            <meta name="description" content="Explore our professional guides, case studies, and strategic trends covering <?php echo $categoryTitle; ?> to grow your business online.">
+            <link rel="canonical" href="<?php echo $domain . 'blog-category/' . $categorySlug; ?>" />
+
+        <?php } elseif ($currentCategorySegment === 'service-category') { ?>
+            <title>Professional <?php echo $categoryTitle; ?> Services India | IBP Web Tech</title>
+            <meta name="keywords" content="<?php echo strtolower($categoryTitle); ?> services, specialized web solutions, custom deployment">
+            <meta name="description" content="Scale your enterprise architecture with our customized <?php echo $categoryTitle; ?> solutions. Built for maximum security, speed, and conversion efficiency.">
+            <link rel="canonical" href="<?php echo $domain . 'service-category/' . $categorySlug; ?>" />
+
+        <?php } elseif ($currentCategorySegment === 'product-category') { ?>
+            <title>Premium <?php echo $categoryTitle; ?> Layouts & Digital Assets</title>
+            <meta name="keywords" content="buy <?php echo strtolower($categoryTitle); ?>, commercial digital templates, web layouts">
+            <meta name="description" content="Browse ready-to-deploy development structures matching <?php echo $categoryTitle; ?> configurations. Built to industry-best design standards.">
+            <link rel="canonical" href="<?php echo $domain . 'product-category/' . $categorySlug; ?>" />
+        <?php } 
+
+    // 2. STANDARD PAGE HANDLING
+    } else {
+
+        if ($pageName === "index.php" || $pageName === "") { ?>
+            <title>Best Website Designing & SEO Company in Indirapuram Ghaziabad | <?php echo htmlspecialchars($row["site_name"]); ?></title>
+            <meta name="keywords" content="website design company indirapuram ghaziabad, website design agency indirapuram ghaziabad, best seo services company in indirapuram, web development ghaziabad">
+            <meta name="description" content="MS Glyph is a premier digital agency providing high-ticket design, technical SEO, and global content solutions. Precision-driven execution for consultants and brands.">
+            <link rel="canonical" href="<?php echo $domain; ?>index.php" />
+        
+        <?php } elseif ($pageName === "about.php") { ?>
+            <title>About Us | Professional Web Design & SEO Experts Ghaziabad</title>
+            <meta name="keywords" content="about ibp web tech, website designing agency ghaziabad, professional web developers indirapuram, seo experts delhi ncr">
+            <meta name="description" content="Learn about IBP Web Tech, our mission, and our expert team. We are a dedicated digital agency helping businesses scale through custom web development and result-driven SEO.">
+            <link rel="canonical" href="<?php echo $domain; ?>about.php" />
+        
+        <?php } elseif ($pageName === "service.php") { ?>
+            <title>Custom Web Development & Professional SEO Services India</title>
+            <meta name="keywords" content="web development services india, corporate website design, professional seo packages, ecommerce website design ghaziabad">
+            <meta name="description" content="Explore our premium web solutions. From responsive business website design and e-commerce development to data-driven SEO strategies that maximize your ROI.">
+            <link rel="canonical" href="<?php echo $domain; ?>service.php" />
+        
+        <?php } elseif ($pageName === "blog.php") { ?>
+            <title>Web Design, SEO & Tech Insights Blog | IBP Web Tech</title>
+            <meta name="keywords" content="web design blog, latest seo tips, digital marketing insights, business website strategies">
+            <meta name="description" content="Stay updated with the IBP Web Tech blog. Read expert tips, tutorials, and insights on web development, search engine optimization, and online business growth.">
+            <link rel="canonical" href="<?php echo $domain; ?>blog.php" />
+        
+        <?php } elseif ($pageName === "shop.php") { ?>
+            <title>Ready-Made Website Templates & Digital Solutions</title>
+            <meta name="keywords" content="buy website templates, premium web layouts, ready-made business websites, digital assets for business">
+            <meta name="description" content="Browse our collection of conversion-optimized website templates and pre-built digital solutions designed to launch your business online instantly.">
+            <link rel="canonical" href="<?php echo $domain; ?>shop.php" />
+        
+        <?php } elseif ($pageName === "pricing.php") { ?>
+            <title>Affordable Web Design & SEO Packages | Transparent Pricing</title>
+            <meta name="keywords" content="website design cost ghaziabad, seo package pricing, web development packages india, affordable digital marketing plans">
+            <meta name="description" content="Check out our budget-friendly web design and SEO packages. Clear, transparent pricing models built to scale small businesses and corporate enterprises.">
+            <link rel="canonical" href="<?php echo $domain; ?>pricing.php" />
+        
+        <?php } elseif ($pageName === "portfolio.php") { ?>
+            <title>Our Work | Web Development & SEO Case Studies</title>
+            <meta name="keywords" content="web design portfolio, live website examples, seo success stories, client case studies ibp web tech">
+            <meta name="description" content="Explore our portfolio of successful projects. See how we have helped companies across India achieve stunning web architecture and top-tier search engine rankings.">
+            <link rel="canonical" href="<?php echo $domain; ?>portfolio.php" />
+        
+        <?php } elseif ($pageName === "contact.php") { ?>
+            <title>Contact IBP Web Tech | Get a Free Website & SEO Consultation</title>
+            <meta name="keywords" content="contact web design company ghaziabad, hire seo agency indirapuram, web development quote, digital marketing consultation">
+            <meta name="description" content="Ready to transform your digital presence? Contact IBP Web Tech today for a free website audit or SEO consultation. Let's scale your business together.">
+            <link rel="canonical" href="<?php echo $domain; ?>contact.php" />
+        <?php } 
+    } 
+?>
+
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="assets/img/logo/favicon.svg">
     <!--<< Bootstrap min.css >>-->
@@ -208,11 +362,11 @@
                                         </a>
                                         <ul class="submenu">
                                             <li><a href="service-details.php">Branding & Identity</a></li>
-                                            <li><a href="service-details.php">Digital & UI/UX Design</a></li>
+                                            <li><a href="service-details.php">Digital Design & UI Graphics</a></li>
                                             <li><a href="service-details.php">Social Media & Ad Creatives</a></li>
-                                            <li><a href="service-details.php">Print & Marketing Materials</a></li>
-                                            <li><a href="service-details.php">Presentation & Educational</a></li>
-                                            <li><a href="service-details.php">Technical SEO & Web Dev</a></li>
+                                            <li><a href="service-details.php">Print & Packaging Design</a></li>
+                                            <li><a href="service-details.php">Presentation & Educational Slides</a></li>
+                                            <li><a href="service-details.php">Translation & Editorial Workflows</a></li>
                                         </ul>
                                     </li>
                                     <li>

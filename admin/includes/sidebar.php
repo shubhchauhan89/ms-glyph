@@ -3,8 +3,8 @@
     <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect"><i
             class="ion-close"></i></button><!-- LOGO -->
     <div class="topbar-left">
-        <div class="text-center bg-logo" style="padding-top: 9px; padding-bottom: 9px;">
-            <a href="index.php" class="logo" style="color: #0a192f; font-weight: 700; letter-spacing: 4px; font-family: 'Inter', sans-serif; font-size: 22px; text-transform: uppercase;">MS GLYPH</a>
+        <div class="text-center bg-logo">
+            <a href="index.php" class="logo"><img src="assets/images/<?php echo htmlspecialchars($roww["header_logo"]); ?>" height="75px" alt="logo"></a> 
         </div>
     </div>
     <div class="sidebar-inner slimscrollleft">
@@ -15,10 +15,10 @@
                         <span>Dashboard</span></a>
                 </li>
                 <li><a href="setting.php" class="waves-effect"><i class="mdi mdi-settings"></i><span>
-                            Global Config</span></a></li>
+                            Setting</span></a></li>
                 <li class="has_sub">
                     <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-jewel"></i>
-                        <span>Service Modules</span>
+                        <span>Service </span>
                         <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
                     </a>
                     <ul class="list-unstyled">
@@ -30,7 +30,7 @@
                 <li class="has_sub">
                     <a href="javascript:void(0);" class="waves-effect">
                         <i class="dripicons-blog"></i>
-                        <span> Blueprint Archive </span>
+                        <span> Blog </span>
                         <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
                     </a>
                     <ul class="list-unstyled">
@@ -40,12 +40,12 @@
                     </ul>
                 </li>
                 <li class="has_sub"><a href="javascript:void(0);" class="waves-effect"><i
-                            class="mdi mdi-cart"></i><span> Portfolio </span><span class="float-right"><i
+                            class="mdi mdi-cart"></i><span> Product </span><span class="float-right"><i
                                 class="mdi mdi-chevron-right"></i></span></a>
                     <ul class="list-unstyled">
-                        <li><a href="add-portfolio-category.php">Add Portfolio  Category</a></li>
-                        <li><a href="add-portfolio.php">Add Portfolio </a></li>
-                        <li><a href="view-portfolio.php">View Portfolio </a></li>
+                        <li><a href="add-product-category.php">Add Product Category</a></li>
+                        <li><a href="add-product.php">Add Product</a></li>
+                        <li><a href="view-product.php">View Product</a></li>
                     </ul>
                 </li>
                 <li class="has_sub"><a href="javascript:void(0);" class="waves-effect"><i
@@ -54,7 +54,7 @@
                     <ul class="list-unstyled">
                         <li><a href="slider.php">Slider</a></li>
                         <li><a href="banner.php">Banner</a></li>
-                        <li><a href="add-testimonial.php">Testimonials</a></li>
+                        <li><a href="add-testimonial.php">Testmonials</a></li>
                     </ul>
                 </li>
             </ul>

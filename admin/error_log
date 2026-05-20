@@ -1,57 +1,31 @@
-[28-Jun-2024 11:30:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/ibpwebtech/public_html/admin/includes/conn.php:17
-Stack trace:
-#0 /home/ibpwebtech/public_html/admin/login.php(2): include()
-#1 {main}
-  thrown in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
-[28-Jun-2024 11:30:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/ibpwebtech/public_html/admin/includes/conn.php:17
-Stack trace:
-#0 /home/ibpwebtech/public_html/admin/login.php(2): include()
-#1 {main}
-  thrown in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
-[28-Jun-2024 11:30:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/ibpwebtech/public_html/admin/includes/conn.php:17
-Stack trace:
-#0 /home/ibpwebtech/public_html/admin/login.php(2): include()
-#1 {main}
-  thrown in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
-[28-Jun-2024 12:08:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/ibpwebtech/public_html/admin/includes/conn.php:17
-Stack trace:
-#0 /home/ibpwebtech/public_html/admin/login.php(2): include()
-#1 {main}
-  thrown in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
-[02-Sep-2024 15:03:45 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
-[02-Sep-2024 15:03:45 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
-[02-Sep-2024 15:09:44 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
-[02-Sep-2024 15:09:44 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
-[04-Sep-2024 15:37:44 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
-[04-Sep-2024 15:37:44 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
-[09-Sep-2024 15:13:42 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
-[09-Sep-2024 15:13:42 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
-[10-Sep-2024 15:17:09 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
-[10-Sep-2024 15:17:09 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
-[10-Sep-2024 15:17:10 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
-[10-Sep-2024 15:17:10 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
-[12-Sep-2024 15:42:32 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
-[12-Sep-2024 15:42:32 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
-[12-Sep-2024 15:42:33 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
-[12-Sep-2024 15:42:33 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
-[13-Sep-2024 17:18:41 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
-[13-Sep-2024 17:18:41 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
-[14-Sep-2024 14:56:12 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
-[14-Sep-2024 14:56:12 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
-[20-Sep-2024 17:16:53 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
-[20-Sep-2024 17:16:53 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
-[20-Sep-2024 17:16:53 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 44
-[20-Sep-2024 17:16:53 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ibpwebtech/public_html/admin/setting.php on line 65
-[28-Nov-2024 11:04:04 UTC] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
-[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ibpwebtech/public_html/admin/includes/header.php on line 8
-[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ibpwebtech/public_html/admin/includes/header.php on line 9
-[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
-[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ibpwebtech/public_html/admin/index.php on line 5
-[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ibpwebtech/public_html/admin/index.php on line 6
-[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ibpwebtech/public_html/admin/index.php on line 8
-[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ibpwebtech/public_html/admin/index.php on line 9
-[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ibpwebtech/public_html/admin/index.php on line 11
-[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ibpwebtech/public_html/admin/index.php on line 12
-[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ibpwebtech/public_html/admin/includes/conn.php on line 17
-[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/ibpwebtech/public_html/admin/includes/footer.php on line 8
-[28-Nov-2024 16:34:04 Asia/Kolkata] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ibpwebtech/public_html/admin/includes/footer.php on line 9
+[11-Jul-2024 16:46:00 Asia/Kolkata] PHP Notice:  Undefined variable: footer_desc in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[11-Jul-2024 16:46:00 Asia/Kolkata] PHP Notice:  Undefined variable: city in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[11-Jul-2024 16:46:00 Asia/Kolkata] PHP Notice:  Undefined variable: state in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[11-Jul-2024 16:46:00 Asia/Kolkata] PHP Notice:  Undefined variable: country in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[11-Jul-2024 16:46:00 Asia/Kolkata] PHP Notice:  Undefined variable: pin in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[11-Jul-2024 16:58:31 Asia/Kolkata] PHP Notice:  Undefined variable: footer_desc in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[11-Jul-2024 16:58:31 Asia/Kolkata] PHP Notice:  Undefined variable: city in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[11-Jul-2024 16:58:31 Asia/Kolkata] PHP Notice:  Undefined variable: state in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[11-Jul-2024 16:58:31 Asia/Kolkata] PHP Notice:  Undefined variable: country in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[11-Jul-2024 16:58:31 Asia/Kolkata] PHP Notice:  Undefined variable: pin in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[12-Jul-2024 18:58:20 Asia/Kolkata] PHP Notice:  Undefined variable: footer_desc in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[12-Jul-2024 18:58:20 Asia/Kolkata] PHP Notice:  Undefined variable: city in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[12-Jul-2024 18:58:20 Asia/Kolkata] PHP Notice:  Undefined variable: state in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[12-Jul-2024 18:58:20 Asia/Kolkata] PHP Notice:  Undefined variable: country in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[12-Jul-2024 18:58:20 Asia/Kolkata] PHP Notice:  Undefined variable: pin in /home/freshfeelhealth/public_html/admin/setting.php on line 52
+[27-Nov-2025 12:22:06 Asia/Kolkata] PHP Notice:  Undefined variable: footer_desc in /home/bipapmachine/public_html/admin/setting.php on line 192
+[27-Nov-2025 12:22:06 Asia/Kolkata] PHP Notice:  Undefined variable: city in /home/bipapmachine/public_html/admin/setting.php on line 192
+[27-Nov-2025 12:22:06 Asia/Kolkata] PHP Notice:  Undefined variable: state in /home/bipapmachine/public_html/admin/setting.php on line 192
+[27-Nov-2025 12:22:06 Asia/Kolkata] PHP Notice:  Undefined variable: country in /home/bipapmachine/public_html/admin/setting.php on line 192
+[27-Nov-2025 12:22:06 Asia/Kolkata] PHP Notice:  Undefined variable: pin in /home/bipapmachine/public_html/admin/setting.php on line 192
+[27-Nov-2025 12:23:26 Asia/Kolkata] PHP Notice:  Undefined variable: footer_desc in /home/bipapmachine/public_html/admin/setting.php on line 192
+[27-Nov-2025 12:23:26 Asia/Kolkata] PHP Notice:  Undefined variable: city in /home/bipapmachine/public_html/admin/setting.php on line 192
+[27-Nov-2025 12:23:26 Asia/Kolkata] PHP Notice:  Undefined variable: state in /home/bipapmachine/public_html/admin/setting.php on line 192
+[27-Nov-2025 12:23:26 Asia/Kolkata] PHP Notice:  Undefined variable: country in /home/bipapmachine/public_html/admin/setting.php on line 192
+[27-Nov-2025 12:23:26 Asia/Kolkata] PHP Notice:  Undefined variable: pin in /home/bipapmachine/public_html/admin/setting.php on line 192
+[10-Mar-2026 16:51:18 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 1245184 bytes) in /home4/ibpequipment/public_html/admin/view-blog.php on line 73
+[11-Mar-2026 16:47:27 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 1245184 bytes) in /home4/ibpequipment/public_html/admin/view-blog.php on line 72
+[13-Mar-2026 17:02:56 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 1245184 bytes) in /home4/ibpequipment/public_html/admin/view-blog.php on line 71
+[14-Mar-2026 17:00:12 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 1245184 bytes) in /home4/ibpequipment/public_html/admin/view-blog.php on line 71
+[15-Mar-2026 14:36:16 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 65536 bytes) in /home4/ibpequipment/public_html/admin/setting.php on line 58
+[15-Mar-2026 18:25:39 Asia/Kolkata] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 1245184 bytes) in /home4/ibpequipment/public_html/admin/view-blog.php on line 71

@@ -17,7 +17,7 @@ include_once 'includes/header.php';
                 <div class="page-heading">
                     <div class="breadcrumb-sub-title">
                         <h1 class="wow fadeInUp" data-wow-delay=".3s">Precision in Practice.</h1>
-                        <p class="wow fadeInUp text-white mt-3" data-wow-delay=".4s" style="max-width: 600px; margin: 0 auto;">Explore our archive of high-performance digital hubs, brand identities, and conversion-driven creatives. We let the results speak for themselves.</p>
+                        <p class="wow fadeInUp  mt-3" data-wow-delay=".4s" style="max-width: 600px; margin: 0 auto;">Explore our archive of high-performance digital hubs, brand identities, and conversion-driven creatives. We let the results speak for themselves.</p>
                     </div>
                     <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                         <li>

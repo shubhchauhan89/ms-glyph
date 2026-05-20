@@ -27,8 +27,8 @@ else{
 
 
 
-$domain = "https://localhost/digtek-ms/";
-$sitemap_domain = "https://localhost/digtek-ms";
+$domain = "https://msglyph.im/";
+$sitemap_domain = "https://msglyph.in";
 
 
-?>
+ ?>

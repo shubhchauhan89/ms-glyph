@@ -6,9 +6,8 @@ include './includes/conn.php';
 if(isset($_POST['delete'])) {
     $ids = isset($_POST['ids']) ? $_POST['ids'] : [];
     foreach($ids as $id) {
-        $del = $id;
-        $stmt = $con->prepare("SELECT * FROM blog where id=?");
-        $stmt->bind_param("i", $del);
+        $stmt = $con->prepare("SELECT * FROM blog WHERE id=?");
+        $stmt->bind_param("i", $id);
         $stmt->execute();
         $selectdelete = $stmt->get_result();
         if(mysqli_num_rows($selectdelete) > 0) {
@@ -18,9 +17,13 @@ if(isset($_POST['delete'])) {
             if(file_exists($img_path) && is_file($img_path)) {
                 unlink($img_path); // Delete image file
             }
-            $stmt_del = $con->prepare("DELETE FROM blog WHERE id=?");
-            $stmt_del->bind_param("i", $del);
-            $p = $stmt_del->execute();
+            $stmt->close();
+            $del_stmt = $con->prepare("DELETE FROM blog WHERE id=?");
+            $del_stmt->bind_param("i", $id);
+            $p = $del_stmt->execute();
+            $del_stmt->close();
+        } else {
+            $stmt->close();
         }
     }
     if($p) {

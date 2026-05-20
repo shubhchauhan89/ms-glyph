@@ -8,6 +8,7 @@ if (isset ($_GET['delete_id'])) {
     $stmt = $con->prepare("DELETE FROM slider WHERE id=?");
     $stmt->bind_param("i", $delete_id);
     $p = $stmt->execute();
+    $stmt->close();
     if ($p) {
         echo "<script>alert('Deleted Successfully');</script>";
     } else {
@@ -24,6 +25,7 @@ if ($edit != '') {
     $stmt->execute();
     $resultt = $stmt->get_result();
     $roww = mysqli_fetch_array($resultt);
+    $stmt->close();
 } else {
     $roww = array("head" => "", "title" => "", "sub_title" => "", "descrip" => "", "button" => "", "url" => "", "img" => "");
 }
@@ -31,12 +33,12 @@ if ($edit != '') {
 $location = mysqli_query($con, "SELECT * FROM slider");
 
 if (isset ($_POST['add'])) {
-    $head = $_POST['head'];
-    $title = $_POST['title'];
-    $sub_title = $_POST['sub_title'];
-    $descrip = $_POST['descrip'];
-    $button = $_POST['button'];
-    $url = $_POST['url'];
+    $head = $_POST['head'] ?? '';
+    $title = $_POST['title'] ?? '';
+    $sub_title = $_POST['sub_title'] ?? '';
+    $descrip = $_POST['descrip'] ?? '';
+    $button = $_POST['button'] ?? '';
+    $url = $_POST['url'] ?? '';
 
     if ($_FILES['lis_img']['name'] != '') {
         $lis_img = rand() . $_FILES['lis_img']['name'];
@@ -58,15 +60,17 @@ if (isset ($_POST['add'])) {
     }
 
     if ($edit == '') {
-        $stmt = $con->prepare("INSERT INTO slider(head, title ,sub_title,descrip,button,url, img) VALUES (?,?,?,?,?,?,?)");
+        $stmt = $con->prepare("INSERT INTO slider(head, title, sub_title, descrip, button, url, img) VALUES (?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("sssssss", $head, $title, $sub_title, $descrip, $button, $url, $lis_img);
-        $insertdata = $stmt->execute();
+        $stmt->execute();
+        $stmt->close();
         echo "<script>alert('Added Successfully');</script>";
         echo "<script>window.location.href = 'slider.php'</script>";
     } else {
         $stmt = $con->prepare("UPDATE slider SET head=?, title=?, sub_title=?, descrip=?, button=?, url=?, img=? WHERE id=?");
         $stmt->bind_param("sssssssi", $head, $title, $sub_title, $descrip, $button, $url, $lis_img, $edit);
-        $insertdata = $stmt->execute();
+        $stmt->execute();
+        $stmt->close();
         echo "<script>alert('Updated Successfully');</script>";
         echo "<script>window.location.href = 'slider.php'</script>";
     }

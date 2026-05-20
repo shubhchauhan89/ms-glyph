@@ -141,7 +141,7 @@ $blog = mysqli_query($con, "SELECT * FROM blog ORDER BY id DESC LIMIT $posts_per
                         <img src="assets/img/cta-img.png" alt="img">
                     </div>
                     <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                        Stay Connected With <br> Cutting Edge IT
+                        Transform Your Brand With <br> Precision Design & Copy
                     </h2>
                     <div class="main-button wow fadeInUp" data-wow-delay=".5s">
                         <a href="contact.php"> <span class="theme-btn"> talk TO  A SPECIALIST </span><span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span></a>

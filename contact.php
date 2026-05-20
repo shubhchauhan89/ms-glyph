@@ -17,7 +17,7 @@ include_once 'includes/header.php';
                 <div class="page-heading">
                     <div class="breadcrumb-sub-title">
                         <h1 class="wow fadeInUp" data-wow-delay=".3s">Start Your Blueprint.</h1>
-                        <p class="wow fadeInUp text-white mt-3" data-wow-delay=".4s" style="max-width: 600px; margin: 0 auto;">Ready to execute your vision with precision? Reach out to our Delhi NCR-based team to discuss your next project.</p>
+                        <p class="wow fadeInUp  mt-3" data-wow-delay=".4s" style="max-width: 600px; margin: 0 auto;">Ready to execute your vision with precision? Reach out to our Delhi NCR-based team to discuss your next project.</p>
                     </div>
                     <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                         <li>
@@ -159,7 +159,7 @@ include_once 'includes/header.php';
                         <img src="assets/img/cta-img.png" alt="img">
                     </div>
                     <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                        Stay Connected With <br> Cutting Edge IT
+                        Transform Your Brand With <br> Precision Design & Copy
                     </h2>
                     <div class="main-button wow fadeInUp" data-wow-delay=".5s">
                         <a href="contact.php"> <span class="theme-btn"> talk TO  A SPECIALIST </span><span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span></a>

@@ -9,23 +9,25 @@ $today = date("D d M Y");
 $edit = isset($_GET['edit']) ? $_GET['edit'] : '';
 
 if (!empty($edit)) {
-    $stmt = $con->prepare("SELECT * FROM services where id=?");
+    $stmt = $con->prepare("SELECT * FROM services WHERE id=?");
     $stmt->bind_param("i", $edit);
     $stmt->execute();
     $resultt = $stmt->get_result();
     $roww = mysqli_fetch_array($resultt);
+    $stmt->close();
 } else {
     $roww = array(); // Initialize $roww as an empty array if $edit is not set
 }
 
 if (isset($_POST['add'])) {
-    $title = $_POST['title'];
-    $category = $_POST['category'];
-    $short_desc = $_POST['short'];
-    $long_desc = $_POST['descrip'];
-    $url = $_POST['url'];
-    $meta_title = $_POST['services_meta_title'];
-    $meta_desc = $_POST['services_meta_desc'];
+    $title = $_POST['title'] ?? '';
+    $category = $_POST['category'] ?? '';
+    $short_desc = $_POST['short'] ?? '';
+    $long_desc = $_POST['descrip'] ?? '';
+    $url = $_POST['url'] ?? '';
+    $meta_title = $_POST['services_meta_title'] ?? '';
+    $meta_desc = $_POST['services_meta_desc'] ?? '';
+    $meta_keywords = $_POST['services_meta_keywords'] ?? '';
 
     if ($_FILES['lis_img']['name'] != '') {
         $lis_img = rand() . $_FILES['lis_img']['name'];
@@ -47,14 +49,17 @@ if (isset($_POST['add'])) {
     }
 
     if (empty($edit)) {
-        $stmt = $con->prepare("INSERT INTO services(title,category,short,descrip,img,url,date,services_meta_title,services_meta_desc,status) VALUES(?,?,?,?,?,?,?,?,?,'0')");
-        $stmt->bind_param("sssssssss", $title, $category, $short_desc, $long_desc, $lis_img, $url, $today, $meta_title, $meta_desc);
-        $insertdata = $stmt->execute() or die(mysqli_error($con));
+        $status = '0';
+        $stmt = $con->prepare("INSERT INTO services(title,category,short,descrip,img,url,date,services_meta_title,services_meta_desc,status) VALUES(?,?,?,?,?,?,?,?,?,?)");
+        $stmt->bind_param("ssssssssss", $title, $category, $short_desc, $long_desc, $lis_img, $url, $today, $meta_title, $meta_desc, $status);
+        $stmt->execute() or die($con->error);
+        $stmt->close();
         echo "<script>alert('Posted Successfully');</script>";
     } else {
-        $stmt = $con->prepare("UPDATE services SET title=?,category=?,short=?,descrip=?,img=?,url=?,date=?,services_meta_title=?,services_meta_desc=? where id=?");
+        $stmt = $con->prepare("UPDATE services SET title=?,category=?,short=?,descrip=?,img=?,url=?,date=?,services_meta_title=?,services_meta_desc=? WHERE id=?");
         $stmt->bind_param("sssssssssi", $title, $category, $short_desc, $long_desc, $lis_img, $url, $today, $meta_title, $meta_desc, $edit);
-        $insertdata = $stmt->execute() or die(mysqli_error($con));
+        $stmt->execute() or die($con->error);
+        $stmt->close();
         echo "<script>alert('Updated Successfully');</script>";
     }
     echo "<script>window.location.href = 'view-services.php'</script>";
@@ -106,6 +111,8 @@ function compressImage($source, $destination, $quality)
                                 <div class="col-md-6">
                                     <h6 class="input-title mt-0">Meta Title</h6>
                                     <input type="text" name="services_meta_title" value="<?php echo $roww["services_meta_title"]; ?>" class="form-control" placeholder="Enter Meta title" id="mdate">
+                                    <h6 class="input-title mt-2">Meta Keywords</h6>
+                                    <input type="text" name="services_meta_keywords" value="<?php echo $roww["services_meta_keywords"]; ?>" class="form-control" placeholder="e.g. healthcare blog, medical tips, patient care">
                                     <h6 class="input-title">Meta description</h6>
                                     <textarea type="text" rows="4" name="services_meta_desc"
                                         class="summernote" class="form-control" placeholder="Enter Meta Description"><?php echo $roww["services_meta_desc"]; ?>

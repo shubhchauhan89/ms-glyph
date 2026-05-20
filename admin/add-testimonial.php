@@ -8,6 +8,7 @@ if (isset ($_GET['delete_id'])) {
     $stmt = $con->prepare("DELETE FROM testimonials WHERE id=?");
     $stmt->bind_param("i", $delete_id);
     $p = $stmt->execute();
+    $stmt->close();
     if ($p) {
         echo "<script>alert('Deleted Successfully');</script>";
     } else {
@@ -24,6 +25,7 @@ if ($edit != '') {
     $stmt->execute();
     $resultt = $stmt->get_result();
     $roww = mysqli_fetch_array($resultt);
+    $stmt->close();
 } else {
     $roww = array("title" => "", "designation" => "","descrip" => "", "img" => "");
 }
@@ -31,9 +33,9 @@ if ($edit != '') {
 $location = mysqli_query($con, "SELECT * FROM testimonials");
 
 if (isset ($_POST['add'])) {
-    $name = $_POST['title'];
-    $designation = $_POST['designation'];
-    $descrip = $_POST['descrip'];
+    $name = $_POST['title'] ?? '';
+    $designation = $_POST['designation'] ?? '';
+    $descrip = $_POST['descrip'] ?? '';
 
     if ($_FILES['lis_img']['name'] != '') {
         $lis_img = rand() . $_FILES['lis_img']['name'];
@@ -55,15 +57,17 @@ if (isset ($_POST['add'])) {
     }
 
     if ($edit == '') {
-        $stmt = $con->prepare("INSERT INTO testimonials(title, designation,descrip, img) VALUES (?,?,?,?)");
+        $stmt = $con->prepare("INSERT INTO testimonials(title, designation, descrip, img) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $name, $designation, $descrip, $lis_img);
-        $insertdata = $stmt->execute();
+        $stmt->execute();
+        $stmt->close();
         echo "<script>alert('Added Successfully');</script>";
         echo "<script>window.location.href = 'add-testimonial.php'</script>";
     } else {
-        $stmt = $con->prepare("UPDATE testimonials SET title=?, designation=?,descrip=?, img=? WHERE id=?");
+        $stmt = $con->prepare("UPDATE testimonials SET title=?, designation=?, descrip=?, img=? WHERE id=?");
         $stmt->bind_param("ssssi", $name, $designation, $descrip, $lis_img, $edit);
-        $insertdata = $stmt->execute();
+        $stmt->execute();
+        $stmt->close();
         echo "<script>alert('Updated Successfully');</script>";
         echo "<script>window.location.href = 'add-testimonial.php'</script>";
     }

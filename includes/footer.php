@@ -42,12 +42,6 @@
                                 <li>
                                     <a href="service-details.php">
                                         <i class="fa-solid fa-chevrons-right"></i>
-                                        SEO & Technical Development
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="service-details.php">
-                                        <i class="fa-solid fa-chevrons-right"></i>
                                         Social Media & Ad Creatives
                                     </a>
                                 </li>

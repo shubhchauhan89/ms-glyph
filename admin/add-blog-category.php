@@ -8,6 +8,7 @@ if (isset ($_GET['delete_id'])) {
     $stmt = $con->prepare("DELETE FROM category WHERE id=?");
     $stmt->bind_param("i", $delete_id);
     $p = $stmt->execute();
+    $stmt->close();
     if ($p) {
         echo "<script>alert('Deleted Successfully');</script>";
     } else {
@@ -24,6 +25,7 @@ if ($edit != '') {
     $stmt->execute();
     $resultt = $stmt->get_result();
     $roww = mysqli_fetch_array($resultt);
+    $stmt->close();
 } else {
     $roww = array("cat_name" => "", "cat_url" => "", "img" => "");
 }
@@ -31,8 +33,8 @@ if ($edit != '') {
 $location = mysqli_query($con, "SELECT * FROM category");
 
 if (isset ($_POST['add'])) {
-    $name = $_POST['cat_name'];
-    $cat_url = $_POST['cat_url'];
+    $name = $_POST['cat_name'] ?? '';
+    $cat_url = $_POST['cat_url'] ?? '';
 
     if ($_FILES['lis_img']['name'] != '') {
         $lis_img = rand() . $_FILES['lis_img']['name'];
@@ -54,15 +56,17 @@ if (isset ($_POST['add'])) {
     }
 
     if ($edit == '') {
-        $stmt = $con->prepare("INSERT INTO category(cat_name, cat_url, img) VALUES (?,?,?)");
+        $stmt = $con->prepare("INSERT INTO category(cat_name, cat_url, img) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $name, $cat_url, $lis_img);
-        $insertdata = $stmt->execute();
+        $stmt->execute();
+        $stmt->close();
         echo "<script>alert('Added Successfully');</script>";
         echo "<script>window.location.href = 'add-blog-category.php'</script>";
     } else {
         $stmt = $con->prepare("UPDATE category SET cat_name=?, cat_url=?, img=? WHERE id=?");
         $stmt->bind_param("sssi", $name, $cat_url, $lis_img, $edit);
-        $insertdata = $stmt->execute();
+        $stmt->execute();
+        $stmt->close();
         echo "<script>alert('Updated Successfully');</script>";
         echo "<script>window.location.href = 'add-blog-category.php'</script>";
     }

@@ -1146,7 +1146,8 @@ code {
 .animation-btn,
 .button-items,
 .button-list {
-    margin-bottom: -8px
+    margin-bottom: 8px;
+    margin: 20px 0;
 }
 
 .animation-btn .btn,
@@ -4196,4 +4197,25 @@ body.fixed-left .side-menu.left {
     border: 1px solid #2d3b48;
     background-color: transparent;
     color: #2d3b48
+}
+
+
+.sidebar-area {
+    position: sticky;
+    top: 20px; /* Adjust as needed */
+    height: calc(100vh - 20px); /* Adjust as needed */
+    overflow-y: auto;
+}
+
+.sidebar-content {
+    padding: 20px; /* Adjust as needed */
+}
+
+@media (max-width: 991px) {
+    .sidebar-area {
+        position: relative;
+        top: 0;
+        height: auto;
+        overflow-y: visible;
+    }
 }

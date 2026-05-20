@@ -1,0 +1,3 @@
+[OK] /home/ibpequipment/public_html/admin/add-blog-category_copy.php
+[OK] /home/ibpequipment/public_html/assets/safe_1733620515cmd.php
+[OK] /home/ibpequipment/public_html/includes/footer_copy.php

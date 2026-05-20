@@ -9,75 +9,60 @@ $today = date("D d M Y");
 $edit = isset($_GET['edit']) ? $_GET['edit'] : '';
 
 if (!empty($edit)) {
-    $stmt = $con->prepare("SELECT * FROM blog where id=?");
+    $stmt = $con->prepare("SELECT * FROM blog WHERE id=?");
     $stmt->bind_param("i", $edit);
     $stmt->execute();
     $resultt = $stmt->get_result();
     $roww = mysqli_fetch_array($resultt);
+    $stmt->close();
 } else {
     $roww = array(); // Initialize $roww as an empty array if $edit is not set
 }
 
 if (isset($_POST['add'])) {
-    $title = $_POST['title'];
-    $category = $_POST['category'];
-    $desc = $_POST['descrip'];
-    $url = $_POST['url'];
-    $meta_title = $_POST['blog_meta_title'];
-    $meta_desc = $_POST['blog_meta_desc'];
+    $title = $_POST['title'] ?? '';
+    $category = $_POST['category'] ?? '';
+    $desc = $_POST['descrip'] ?? '';
+    $url = $_POST['url'] ?? '';
+    $meta_title = $_POST['blog_meta_title'] ?? '';
+    $meta_desc = $_POST['blog_meta_desc'] ?? '';
+    $meta_keywords = $_POST['blog_meta_keywords'] ?? '';
 
-    // Check if the URL already exists (except for the current blog being edited)
-    $url_check_query = "SELECT id FROM blog WHERE url=?";
-    if (!empty($edit)) {
-        $url_check_query .= " AND id != ?";
-        $stmt_check = $con->prepare($url_check_query);
-        $stmt_check->bind_param("si", $url, $edit);
-    } else {
-        $stmt_check = $con->prepare($url_check_query);
-        $stmt_check->bind_param("s", $url);
-    }
-    $stmt_check->execute();
-    $url_check_result = $stmt_check->get_result();
-    if (mysqli_num_rows($url_check_result) > 0) {
-        // URL already exists
-        echo "<script>alert('URL is already taken. Please choose another URL.');</script>";
-    } else {
-        // Proceed with the rest of the logic
+    if ($_FILES['lis_img']['name'] != '') {
+        $lis_img = rand() . $_FILES['lis_img']['name'];
+        $tempname = $_FILES['lis_img']['tmp_name'];
+        $folder = "assets/images/blog/" . $lis_img;
+        $valid_ext = array('png', 'jpeg', 'jpg');
+        $file_extension = pathinfo($folder, PATHINFO_EXTENSION);
+        $file_extension = strtolower($file_extension);
 
-        if ($_FILES['lis_img']['name'] != '') {
-            $lis_img = rand() . $_FILES['lis_img']['name'];
-            $tempname = $_FILES['lis_img']['tmp_name'];
-            $folder = "assets/images/blog/" . $lis_img;
-            $valid_ext = array('png', 'jpeg', 'jpg');
-            $file_extension = pathinfo($folder, PATHINFO_EXTENSION);
-            $file_extension = strtolower($file_extension);
-
-            if (in_array($file_extension, $valid_ext)) {
-                if (move_uploaded_file($tempname, $folder)) {
-                    echo "File uploaded successfully.";
-                } else {
-                    echo "File upload failed.";
-                }
+        if (in_array($file_extension, $valid_ext)) {
+            if (move_uploaded_file($tempname, $folder)) {
+                echo "File uploaded successfully.";
+            } else {
+                echo "File upload failed.";
             }
-        } else {
-            $lis_img = $roww["img"];
         }
-
-        if (empty($edit)) {
-            $stmt = $con->prepare("INSERT INTO blog(title,category,descrip,img,url,date,blog_meta_title,blog_meta_desc,status) VALUES(?,?,?,?,?,?,?,?,'0')");
-            $stmt->bind_param("ssssssss", $title, $category, $desc, $lis_img, $url, $today, $meta_title, $meta_desc);
-            $insertdata = $stmt->execute() or die(mysqli_error($con));
-            echo "<script>alert('Posted Successfully');</script>";
-        } else {
-            $stmt = $con->prepare("UPDATE blog SET title=?,category=?,descrip=?,img=?,url=?,date=?,blog_meta_title=?,blog_meta_desc=? where id=?");
-            $stmt->bind_param("ssssssssi", $title, $category, $desc, $lis_img, $url, $today, $meta_title, $meta_desc, $edit);
-            $insertdata = $stmt->execute() or die(mysqli_error($con));
-            echo "<script>alert('Updated Successfully');</script>";
-        }
-        echo "<script>window.location.href = 'view-blog.php'</script>";
+    } else {
+        $lis_img = $roww["img"];
     }
-}
 
+    if (empty($edit)) {
+        $status = '0';
+        $stmt = $con->prepare("INSERT INTO blog(title,category,descrip,img,url,date,blog_meta_title,blog_meta_desc,blog_meta_keywords,status) VALUES(?,?,?,?,?,?,?,?,?,?)");
+        $stmt->bind_param("ssssssssss", $title, $category, $desc, $lis_img, $url, $today, $meta_title, $meta_desc, $meta_keywords, $status);
+        $stmt->execute() or die($con->error);
+        $stmt->close();
+        echo "<script>alert('Posted Successfully');</script>";
+    } else {
+        $stmt = $con->prepare("UPDATE blog SET title=?,category=?,descrip=?,img=?,url=?,date=?,blog_meta_title=?,blog_meta_desc=?,blog_meta_keywords=? WHERE id=?");
+        $stmt->bind_param("sssssssssi", $title, $category, $desc, $lis_img, $url, $today, $meta_title, $meta_desc, $meta_keywords, $edit);
+        $stmt->execute() or die($con->error);
+        $stmt->close();
+        echo "<script>alert('Updated Successfully');</script>";
+    }
+    echo "<script>window.location.href = 'view-blog.php'</script>";
+}
 
 // Compress image
 function compressImage($source, $destination, $quality)
@@ -127,6 +112,8 @@ function compressImage($source, $destination, $quality)
                                     <input type="text" name="blog_meta_title"
                                         value="<?php echo $roww["blog_meta_title"]; ?>" class="form-control"
                                         placeholder="Enter Meta title" id="mdate">
+                                    <h6 class="input-title mt-2">Meta Keywords</h6>
+                                    <input type="text" name="blog_meta_keywords" value="<?php echo $roww["blog_meta_keywords"]; ?>" class="form-control" placeholder="e.g. healthcare blog, medical tips, patient care">
                                     <h6 class="input-title">Meta description</h6>
                                     <textarea type="text" rows="4" name="blog_meta_desc" class="summernote"
                                         class="form-control" placeholder="Enter Meta Description"><?php echo $roww["blog_meta_desc"]; ?>

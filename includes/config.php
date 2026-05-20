@@ -13,7 +13,7 @@ $agency_blueprint = [
     'address' => 'Block C, Yamuna Vihar, Delhi, 110053',
     'primary_email' => 'hello@msglyph.com',
     'service_area' => 'Delhi NCR',
-    'agency_description' => 'MS Glyph is a premier digital agency where technical precision meets creative power. We act as the silent execution arm for consultants, local leaders, and global brands.',
+    'agency_description' => 'MS Glyph is a premier creative studio where visual precision meets editorial power. We act as the elite silent partner and extended execution arm for consultants, local leaders, and global brands.',
     'social_linkedin' => 'https://linkedin.com/company/msglyph',
     'social_instagram' => 'https://instagram.com/msglyph'
 ];

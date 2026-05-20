@@ -8,12 +8,13 @@ if (isset ($_GET['delete_id'])) {
     $stmt = $con->prepare("DELETE FROM services_cat WHERE id=?");
     $stmt->bind_param("i", $delete_id);
     $p = $stmt->execute();
+    $stmt->close();
     if ($p) {
         echo "<script>alert('Deleted Successfully');</script>";
     } else {
         echo "<script>alert('Deletion Failed');</script>";
     }
-    echo "<script>window.location.href = 'add-service-category.php'</script>";
+    echo "<script>window.location.href = 'add-services-category.php'</script>";
 }
 
 $edit = isset ($_GET['edit']) ? $_GET['edit'] : '';
@@ -24,6 +25,7 @@ if ($edit != '') {
     $stmt->execute();
     $resultt = $stmt->get_result();
     $roww = mysqli_fetch_array($resultt);
+    $stmt->close();
 } else {
     $roww = array("service_cat_name" => "", "service_cat_url" => "", "img" => "");
 }
@@ -31,8 +33,8 @@ if ($edit != '') {
 $location = mysqli_query($con, "SELECT * FROM services_cat");
 
 if (isset ($_POST['add'])) {
-    $name = $_POST['service_cat_name'];
-    $cat_url = $_POST['service_cat_url'];
+    $name = $_POST['service_cat_name'] ?? '';
+    $cat_url = $_POST['service_cat_url'] ?? '';
 
     if ($_FILES['lis_img']['name'] != '') {
         $lis_img = rand() . $_FILES['lis_img']['name'];
@@ -54,15 +56,17 @@ if (isset ($_POST['add'])) {
     }
 
     if ($edit == '') {
-        $stmt = $con->prepare("INSERT INTO services_cat(service_cat_name, service_cat_url, img) VALUES (?,?,?)");
+        $stmt = $con->prepare("INSERT INTO services_cat(service_cat_name, service_cat_url, img) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $name, $cat_url, $lis_img);
-        $insertdata = $stmt->execute();
+        $stmt->execute();
+        $stmt->close();
         echo "<script>alert('Added Successfully');</script>";
         echo "<script>window.location.href = 'add-service-category.php'</script>";
     } else {
         $stmt = $con->prepare("UPDATE services_cat SET service_cat_name=?, service_cat_url=?, img=? WHERE id=?");
         $stmt->bind_param("sssi", $name, $cat_url, $lis_img, $edit);
-        $insertdata = $stmt->execute();
+        $stmt->execute();
+        $stmt->close();
         echo "<script>alert('Updated Successfully');</script>";
         echo "<script>window.location.href = 'add-service-category.php'</script>";
     }

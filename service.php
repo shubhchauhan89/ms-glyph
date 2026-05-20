@@ -16,8 +16,8 @@ include_once 'includes/header.php';
             <div class="container">
                 <div class="page-heading">
                     <div class="breadcrumb-sub-title">
-                        <h1 class="wow fadeInUp" data-wow-delay=".3s">Comprehensive Solutions. Precise Execution.</h1>
-                        <p class="wow fadeInUp text-white mt-3" data-wow-delay=".4s" style="max-width: 600px; margin: 0 auto;">From visual identity to technical SEO, we provide a full spectrum of digital and creative services designed to scale your brand with precision.</p>
+                        <h1 class="wow fadeInUp" data-wow-delay=".3s">Bespoke Visual Craft. Editorial Precision.</h1>
+                        <p class="wow fadeInUp   mt-3" data-wow-delay=".4s" style="max-width: 600px; margin: 0 auto;">From signature brand identities to complex multi-lingual localization, we provide an elite spectrum of creative design and layout services engineered to command absolute market authority.</p>
                     </div>
                     <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                         <li>
@@ -43,12 +43,48 @@ include_once 'includes/header.php';
                     <?php
                     // MS Glyph Silent Execution Fallback - Services
                     $services_list = [
-                        ['title' => 'Branding & Identity', 'category_list' => 'Logo Design, Brand Identity, Business Cards, Letterheads, Brand Guidelines', 'icon_class' => 'icon-1.png', 'slug' => 'branding-identity', 'description' => 'Building the foundational "Glyphs" of your brand for a cohesive, professional market presence.'],
-                        ['title' => 'Digital & UI/UX Design', 'category_list' => 'Website Banners, Landing Pages, App UI, Email Templates, Web Graphics', 'icon_class' => 'icon-2.png', 'slug' => 'digital-ui-ux-design', 'description' => 'High-performance digital assets designed for user engagement and technical seamlessness.'],
-                        ['title' => 'Social Media & Ad Creatives', 'category_list' => 'Instagram Posts, Facebook Ads, YouTube Thumbnails, Story & Reel Covers, Social Media Banners', 'icon_class' => 'icon-3.png', 'slug' => 'social-media-ad-creatives', 'description' => 'Capturing attention across platforms with viral creatives and professional branding elements.'],
-                        ['title' => 'Print & Marketing Materials', 'category_list' => 'Posters, Flyers, Brochures, Menu Cards, Packaging Design, Product Catalogs, Infographics', 'icon_class' => 'icon-4.png', 'slug' => 'print-marketing-materials', 'description' => 'Translating digital precision into high-fidelity physical marketing assets.'],
-                        ['title' => 'Presentation & Educational Design', 'category_list' => 'Specialized PPT Design, Coaching Center Slides, Corporate Presentations', 'icon_class' => 'icon-5.png', 'slug' => 'presentation-educational-design', 'description' => 'Architecting clear, compelling slide decks that communicate complex concepts simply.'],
-                        ['title' => 'Technical SEO & Web Dev', 'category_list' => 'Comprehensive SEO, Website Designing, Local SEO, Keyword Strategy', 'icon_class' => 'icon-6.png', 'slug' => 'technical-seo-web-dev', 'description' => 'Engineering high-speed, SEO-optimized web hubs that dominate search rankings locally and globally.']
+                        [
+                            'title' => 'Branding & Identity', 
+                            'category_list' => 'Logo Design, Brand Identity Design, Business Cards, Letterheads, Brand Guidelines', 
+                            'icon_class' => 'icon-1.png', 
+                            'slug' => 'branding-identity', 
+                            'description' => 'Building the foundational visual "Glyphs" of your enterprise for absolute market authority.'
+                        ],
+                        [
+                            'title' => 'Digital Design & UI Graphics', 
+                            'category_list' => 'Website Banners, Landing Page Design, App UI Layouts, Email Templates, Web Graphics', 
+                            'icon_class' => 'icon-2.png', 
+                            'slug' => 'digital-design-ui-graphics', 
+                            'description' => 'High-fidelity visual interfaces and layouts crafted for pristine aesthetic positioning and responsive layout composition.'
+                        ],
+                        [
+                            'title' => 'Social Media & Ad Creatives', 
+                            'category_list' => 'Instagram Posts, Facebook Ads, YouTube Thumbnails, Story & Reel Covers, Promotional Banners', 
+                            'icon_class' => 'icon-3.png', 
+                            'slug' => 'social-media-ad-creatives', 
+                            'description' => 'Commanding attention across core platforms with high-conversion advertisement creatives and premium social layouts.'
+                        ],
+                        [
+                            'title' => 'Print & Packaging Design', 
+                            'category_list' => 'Posters, Flyers, Brochures, Menu Cards, Packaging Design, Product Catalogs, Invitation Cards', 
+                            'icon_class' => 'icon-4.png', 
+                            'slug' => 'print-packaging-design', 
+                            'description' => 'Translating structural vector precision into tactile excellence through premium physical assets and custom product packaging.'
+                        ],
+                        [
+                            'title' => 'Presentation & Educational Design', 
+                            'category_list' => 'Corporate Presentations, Educational PPT Design, Coaching Center Slides, School Project Presentations, Infographics', 
+                            'icon_class' => 'icon-5.png', 
+                            'slug' => 'presentation-educational-design', 
+                            'description' => 'Structuring elite, high-impact slide systems that translate complex educational or corporate data into intuitive visual records.'
+                        ],
+                        [
+                            'title' => 'Translation & Editorial Workflows', 
+                            'category_list' => 'Professional Translation, Copy Proofreading, Asset Localization, Document Refinement', 
+                            'icon_class' => 'icon-6.png', 
+                            'slug' => 'translation-editorial-workflows', 
+                            'description' => 'Ensuring absolute cross-border precision with flawless native translation and meticulous structural copy proofreading.'
+                        ]
                     ];
 
                     if (isset($agency_blueprint_conn) && $agency_blueprint_conn !== null) {
@@ -120,30 +156,34 @@ include_once 'includes/header.php';
             <div class="container">
                 <div class="team-wrapper style-4">
                     <div class="row g-4 align-items-center">
+                        <!-- Left Column: Counter Box -->
                         <div class="col-xl-6">
                             <div class="results-left-items">
-                               <div class="content">
+                            <div class="content">
                                     <h2><span class="count">500</span>+</h2>
-                                    <h3>Total Project</h3>
-                                    <p>Lorem dolor amet consectetur adipiscing any more elit.</p>
-                               </div>
-                               <div class="thumb">
+                                    <h3>Completed Briefs</h3>
+                                    <p>Bespoke visual identities, elite presentation decks, and premium packaging assets shipped globally.</p>
+                            </div>
+                            <div class="thumb">
                                     <img src="assets/img/service/gap-shape.png" alt="img">
-                               </div>
+                            </div>
                             </div>
                         </div>
+                        <!-- Right Column: Content Area -->
                         <div class="col-xl-6">
                             <div class="team-content">
                                 <div class="section-title">
                                     <div class="sub-title bg-color-2 wow fadeInUp">
-                                        <span>Best SEO results</span>
+                                        <span>Creative Mastery</span>
                                     </div>
                                     <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                                        Let’s make something awesome together
+                                        Let’s craft your brand's next chapter together
                                     </h2>
                                 </div>
                                 <p class="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
-                                    Every pleasure is to be welcomed and every pain avoided. certain circumstances and owing to the claims welcomed and every pain avoided certain circumstances
+                                    We combine rigorous layout structure with elegant visual aesthetics to build memorable corporate narratives. 
+                                    By merging our deep Adobe asset production workflows with native translation expertise, we protect your brand voice 
+                                    across every physical print catalog and digital interface.
                                 </p>
                                 <div class="list-items wow fadeInUp" data-wow-delay=".3s">
                                     <ul>
@@ -151,13 +191,13 @@ include_once 'includes/header.php';
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <path d="M7.38397 14.1797C7.34153 14.1797 7.29954 14.171 7.26066 14.1539C7.22178 14.1369 7.18683 14.1121 7.15803 14.0809L1.06612 7.49119C1.02551 7.44726 0.99859 7.39244 0.988651 7.33344C0.978712 7.27445 0.986187 7.21384 1.01016 7.15902C1.03414 7.10421 1.07357 7.05758 1.12364 7.02483C1.17371 6.99208 1.23223 6.97464 1.29206 6.97464H4.22437C4.26839 6.97464 4.31191 6.98409 4.35197 7.00234C4.39204 7.0206 4.42772 7.04723 4.45661 7.08045L6.49255 9.42273C6.71258 8.95239 7.13852 8.16925 7.88597 7.21497C8.99095 5.8042 11.0463 3.7294 14.5627 1.85642C14.6307 1.82023 14.7097 1.81083 14.7843 1.83009C14.8588 1.84936 14.9235 1.89587 14.9654 1.96046C15.0073 2.02504 15.0235 2.103 15.0108 2.17894C14.998 2.25488 14.9573 2.32328 14.8966 2.37064C14.8831 2.38113 13.5273 3.44882 11.967 5.40448C10.5309 7.20417 8.62191 10.1469 7.68255 13.946C7.66605 14.0128 7.62767 14.0721 7.57354 14.1144C7.5194 14.1568 7.45263 14.1799 7.38388 14.1799L7.38397 14.1797Z" fill="#9B7EBD"/>
                                             </svg>
-                                            30-day money back guarantee
+                                            Custom Identity Architecture
                                         </li>
                                         <li>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <path d="M7.38397 14.1797C7.34153 14.1797 7.29954 14.171 7.26066 14.1539C7.22178 14.1369 7.18683 14.1121 7.15803 14.0809L1.06612 7.49119C1.02551 7.44726 0.99859 7.39244 0.988651 7.33344C0.978712 7.27445 0.986187 7.21384 1.01016 7.15902C1.03414 7.10421 1.07357 7.05758 1.12364 7.02483C1.17371 6.99208 1.23223 6.97464 1.29206 6.97464H4.22437C4.26839 6.97464 4.31191 6.98409 4.35197 7.00234C4.39204 7.0206 4.42772 7.04723 4.45661 7.08045L6.49255 9.42273C6.71258 8.95239 7.13852 8.16925 7.88597 7.21497C8.99095 5.8042 11.0463 3.7294 14.5627 1.85642C14.6307 1.82023 14.7097 1.81083 14.7843 1.83009C14.8588 1.84936 14.9235 1.89587 14.9654 1.96046C15.0073 2.02504 15.0235 2.103 15.0108 2.17894C14.998 2.25488 14.9573 2.32328 14.8966 2.37064C14.8831 2.38113 13.5273 3.44882 11.967 5.40448C10.5309 7.20417 8.62191 10.1469 7.68255 13.946C7.66605 14.0128 7.62767 14.0721 7.57354 14.1144C7.5194 14.1568 7.45263 14.1799 7.38388 14.1799L7.38397 14.1797Z" fill="#9B7EBD"/>
                                             </svg>
-                                            Web site Marketing Solutions
+                                            Elite Corporate Presentation Layouts
                                         </li>
                                     </ul>
                                     <ul>
@@ -165,18 +205,18 @@ include_once 'includes/header.php';
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <path d="M7.38397 14.1797C7.34153 14.1797 7.29954 14.171 7.26066 14.1539C7.22178 14.1369 7.18683 14.1121 7.15803 14.0809L1.06612 7.49119C1.02551 7.44726 0.99859 7.39244 0.988651 7.33344C0.978712 7.27445 0.986187 7.21384 1.01016 7.15902C1.03414 7.10421 1.07357 7.05758 1.12364 7.02483C1.17371 6.99208 1.23223 6.97464 1.29206 6.97464H4.22437C4.26839 6.97464 4.31191 6.98409 4.35197 7.00234C4.39204 7.0206 4.42772 7.04723 4.45661 7.08045L6.49255 9.42273C6.71258 8.95239 7.13852 8.16925 7.88597 7.21497C8.99095 5.8042 11.0463 3.7294 14.5627 1.85642C14.6307 1.82023 14.7097 1.81083 14.7843 1.83009C14.8588 1.84936 14.9235 1.89587 14.9654 1.96046C15.0073 2.02504 15.0235 2.103 15.0108 2.17894C14.998 2.25488 14.9573 2.32328 14.8966 2.37064C14.8831 2.38113 13.5273 3.44882 11.967 5.40448C10.5309 7.20417 8.62191 10.1469 7.68255 13.946C7.66605 14.0128 7.62767 14.0721 7.57354 14.1144C7.5194 14.1568 7.45263 14.1799 7.38388 14.1799L7.38397 14.1797Z" fill="#9B7EBD"/>
                                             </svg>
-                                            Unlimited Application
+                                            Flawless Multi-Lingual Localization
                                         </li>
                                         <li>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <path d="M7.38397 14.1797C7.34153 14.1797 7.29954 14.171 7.26066 14.1539C7.22178 14.1369 7.18683 14.1121 7.15803 14.0809L1.06612 7.49119C1.02551 7.44726 0.99859 7.39244 0.988651 7.33344C0.978712 7.27445 0.986187 7.21384 1.01016 7.15902C1.03414 7.10421 1.07357 7.05758 1.12364 7.02483C1.17371 6.99208 1.23223 6.97464 1.29206 6.97464H4.22437C4.26839 6.97464 4.31191 6.98409 4.35197 7.00234C4.39204 7.0206 4.42772 7.04723 4.45661 7.08045L6.49255 9.42273C6.71258 8.95239 7.13852 8.16925 7.88597 7.21497C8.99095 5.8042 11.0463 3.7294 14.5627 1.85642C14.6307 1.82023 14.7097 1.81083 14.7843 1.83009C14.8588 1.84936 14.9235 1.89587 14.9654 1.96046C15.0073 2.02504 15.0235 2.103 15.0108 2.17894C14.998 2.25488 14.9573 2.32328 14.8966 2.37064C14.8831 2.38113 13.5273 3.44882 11.967 5.40448C10.5309 7.20417 8.62191 10.1469 7.68255 13.946C7.66605 14.0128 7.62767 14.0721 7.57354 14.1144C7.5194 14.1568 7.45263 14.1799 7.38388 14.1799L7.38397 14.1797Z" fill="#9B7EBD"/>
                                             </svg>
-                                            24/7 system Monitoring
+                                            Meticulous Document Proofreading
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="main-button wow fadeInUp" data-wow-delay=".5s">
-                                    <a href="team.php"> <span class="theme-btn"> EXPLORE MORE </span><span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span></a>
+                                    <a href="contact.php"> <span class="theme-btn"> BRIEF OUR STUDIO </span><span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span></a>
                                 </div>
                             </div>
                         </div>
@@ -186,7 +226,7 @@ include_once 'includes/header.php';
         </section>
 
         <!-- Pricing Section Start -->
-        <section class="pricing-section section-padding">
+        <!-- <section class="pricing-section section-padding">
             <div class="left-shape float-bob-y">
                 <img src="assets/img/pricing-left.png" alt="img">
             </div>
@@ -422,7 +462,7 @@ include_once 'includes/header.php';
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Cta Contact Section Start -->
         <section class="cta-contact-section pt-0 fix section-padding">
@@ -433,14 +473,14 @@ include_once 'includes/header.php';
                     </div>
                     <div class="section-title mb-0">
                         <div class="sub-title bg-color-3 wow fadeInUp">
-                            <span>Contact US</span>
+                            <span>Connect With Us</span>
                         </div>
                         <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
-                            24/7 Expert Hosting Support <br> Our Customers Love
+                            Seamless Creative Execution <br> Trusted by Elite Brands
                         </h2>
                     </div>
                     <div class="main-button wow fadeInUp" data-wow-delay=".5s">
-                        <a href="contact.php"> <span class="theme-btn">Talk to a Specialist </span><span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span></a>
+                        <a href="contact.php"> <span class="theme-btn">BRIEF OUR STUDIO </span><span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span></a>
                     </div>
                 </div>
             </div>
@@ -474,6 +514,7 @@ include_once 'includes/header.php';
                                 </div>
                                 <div class="swiper testimonial-slider-3">
                                     <div class="swiper-wrapper">
+                                        <!-- Slide 1: Focus on Brand Identity & Corporate Presentations -->
                                         <div class="swiper-slide">
                                             <div class="testimonial-card-items">
                                                 <div class="client-info">
@@ -486,13 +527,15 @@ include_once 'includes/header.php';
                                                     </div>
                                                 </div>
                                                 <p>
-                                                    MS Glyph didn't just build a website; they architected a digital authority. Their precision in content and design transformed how my clients perceive my consulting firm. Truly a silent execution partner.
+                                                    MS Glyph didn't just refresh our logo; they architected an entire corporate identity system. Their precision in structural presentation layouts and elite slide decks completely transformed how enterprise clients perceive our firm. Truly a master-level extended creative arm.
                                                 </p>
                                                 <div class="icon">
                                                     <img src="assets/img/testimonial/icon.png" alt="img">
                                                 </div>
                                             </div>
                                         </div>
+                                        
+                                        <!-- Slide 2: Focus on Premium Print, Catalogs, & Ad Creatives -->
                                         <div class="swiper-slide">
                                             <div class="testimonial-card-items">
                                                 <div class="client-info">
@@ -505,13 +548,15 @@ include_once 'includes/header.php';
                                                     </div>
                                                 </div>
                                                 <p>
-                                                    Dominating the Delhi NCR search results seemed impossible until we worked with MS Glyph. Their local SEO and ad creatives drove more foot traffic in three months than we saw all last year.
+                                                    Presenting luxury real estate profiles across Delhi NCR demands absolute aesthetic perfection. MS Glyph executed spectacular high-fidelity product catalogs, print brochures, and digital advertisement creatives that immediately elevated our market authority.
                                                 </p>
                                                 <div class="icon">
                                                     <img src="assets/img/testimonial/icon.png" alt="img">
                                                 </div>
                                             </div>
                                         </div>
+                                        
+                                        <!-- Slide 3: Focus on Translation, Proofreading & Asset Localization -->
                                         <div class="swiper-slide">
                                             <div class="testimonial-card-items">
                                                 <div class="client-info">
@@ -524,7 +569,7 @@ include_once 'includes/header.php';
                                                     </div>
                                                 </div>
                                                 <p>
-                                                    Their translation and proofreading services are flawless. They captured our brand voice perfectly for international markets while maintaining the high-end design of our pitch decks.
+                                                    Their native translation and deep proofreading services are flawless. They meticulously calibrated our brand voice for international markets while perfectly executing the complex Adobe-based vector graphics of our global corporate pitch decks.
                                                 </p>
                                                 <div class="icon">
                                                     <img src="assets/img/testimonial/icon.png" alt="img">
@@ -555,10 +600,10 @@ include_once 'includes/header.php';
                         <img src="assets/img/cta-img.png" alt="img">
                     </div>
                     <h2 class="wow fadeInUp" data-wow-delay=".3s" style="font-size: 32px;">
-                        Need Global Consistency? <br> Explore our Professional Proofreading & Translation Services
+                        Cross-Border Brand Authority. <br> Elite Translation & Meticulous Proofreading Systems
                     </h2>
                     <div class="main-button wow fadeInUp" data-wow-delay=".5s">
-                        <a href="service-details.php"> <span class="theme-btn"> Explore Translation </span><span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span></a>
+                        <a href="service-details.php"> <span class="theme-btn"> EXPLORE LOCALIZATION </span><span class="arrow-btn"><i class="fa-regular fa-arrow-up-right"></i></span></a>
                     </div>
                 </div>
             </div>
