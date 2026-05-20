@@ -12,7 +12,7 @@ Version: 1.0.0
   --body: #fff;
   --black: #000;
   --white: #fff;
-  --theme: #6A47ED;
+  --theme: #9B7EBD;
   --theme2: #C6F806;
   --header: #17012C;
   --text: #504E4E;
@@ -3899,7 +3899,7 @@ span {
   }
 }
 .hero-3 .hero-content h1 span {
-  background: linear-gradient(90deg, #6A47ED 35.31%, #FB17FF 100%);
+  background: linear-gradient(90deg, #9B7EBD 35.31%, #81A6C6 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5192,7 +5192,7 @@ input.main-search-input::placeholder {
   background-color: var(--theme);
 }
 .pricing-box-items.style-2 .pricing-header {
-  background: #6A47ED;
+  background: #9B7EBD;
 }
 .pricing-box-items.style-2 .price-button .theme-btn {
   border: 1.5px solid var(--theme);
@@ -6048,7 +6048,7 @@ input.main-search-input::placeholder {
   line-height: 175%;
   color: var(--text);
   font-style: italic;
-  border-left: 1px solid #6A47ED;
+  border-left: 1px solid #9B7EBD;
   padding-left: 20px;
 }
 .section-title-area p.white-text {
