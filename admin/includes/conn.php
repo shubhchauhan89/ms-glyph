@@ -27,7 +27,7 @@ else{
 
 
 
-$domain = "https://msglyph.im/";
+$domain = "https://msglyph.in/";
 $sitemap_domain = "https://msglyph.in";
 
 

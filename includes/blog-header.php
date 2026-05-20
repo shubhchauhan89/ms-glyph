@@ -237,7 +237,7 @@ $row = mysqli_fetch_array($settings);
                                         <a href="project.php">Portfolio</a>
                                     </li>
                                     <li>
-                                        <a href="news.php">News & Insights</a>
+                                        <a href="blog.php">News & Insights</a>
                                     </li>
                                     <li>
                                         <a href="about.php">About Us</a>

@@ -1,8 +1,76 @@
-# Protect included files from direct browser access
-<FilesMatch "\.(php|inc|json)$">
-    Order Allow,Deny
-    Deny from all
-</FilesMatch>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.msglyph\.in [NC]
+RewriteRule ^(.*)$ https://msglyph.in/$1 [L,R=301]
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^(.*)$ $1.php [NC,L]
 
-# Optional alternative for newer Apache versions
-# Require all denied
+#RewriteRule ^blog-details/([^/.]+)?$ blog-details.php?slug_url=$1 [NC]
+
+RewriteRule ^contact/?$ contact.php [NC,L]
+RewriteRule ^index/?$ index.php [NC,L]
+RewriteRule ^about/?$ about.php [NC,L]
+RewriteRule ^service/?$ service.php [NC,L]
+RewriteRule ^our-products/?$ our-products.php [NC,L]
+RewriteRule ^faq/?$ faq.php [NC,L]
+RewriteRule ^blog/?$ blog.php [NC,L]
+RewriteEngine On
+
+# Allow access only to maintenance file
+
+
+RewriteRule ^blog/([A-Za-z0-9-]+)?$ blog-detail.php?url=$1 [NC]
+RewriteRule ^service/([A-Za-z0-9-]+)?$ service-detail.php?url=$1 [NC]
+RewriteRule ^product/([A-Za-z0-9-]+)?$ product-detail.php?url=$1 [NC]
+RewriteRule ^product-category/([A-Za-z0-9-]+)?$ product-category.php?category=$1 [NC]
+RewriteRule ^service-category/([A-Za-z0-9-]+)?$ service-category.php?category=$1 [NC]
+RewriteRule ^course-category/([A-Za-z0-9-]+)?$ course-category.php?category=$1 [NC]
+RewriteRule ^blog-category/([A-Za-z0-9-]+)?$ blog-category.php?category=$1 [NC]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^msglyph\.in [OR]
+RewriteCond %{HTTP_HOST} ^www\.msglyph\.in$
+RewriteRule ^/?$ "https\:\/\/msglyph\.in\/" [R=301,L]
+
+#pagniation url
+RewriteRule ^blog/page/(\d+)$ blog.php?page=$1 [L]
+RewriteRule ^shop/page/(\d+)$ shop.php?page=$1 [L]
+RewriteRule ^blog-category/([^/]+)/page/(\d+)$ blog-category.php?category=$1&page=$2 [L]
+RewriteRule ^product-category/([^/]+)/page/(\d+)$ product-category.php?category=$1&page=$2 [L]
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php7_module>
+   php_flag display_errors On
+   php_value max_execution_time 30
+   php_value max_input_time -1
+   php_value max_input_vars 1000
+   php_value memory_limit 128M
+   php_value post_max_size 8M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/opt/alt/php74/var/lib/php/session"
+   php_value upload_max_filesize 2M
+   php_flag zlib.output_compression On
+</IfModule>
+<IfModule lsapi_module>
+   php_flag display_errors On
+   php_value max_execution_time 30
+   php_value max_input_time -1
+   php_value max_input_vars 1000
+   php_value memory_limit 128M
+   php_value post_max_size 8M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/opt/alt/php74/var/lib/php/session"
+   php_value upload_max_filesize 2M
+   php_flag zlib.output_compression On
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “alt-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-alt-php74___lsphp .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

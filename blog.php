@@ -110,19 +110,19 @@ $blog = mysqli_query($con, "SELECT * FROM blog ORDER BY id DESC LIMIT $posts_per
                 <div class="page-nav-wrap pt-5 text-center">
                     <ul>
                         <?php if ($current_page > 1): ?>
-                        <li><a class="page-numbers" href="news.php?page=<?php echo $current_page - 1; ?>"><i class="fa-solid fa-arrow-left-long"></i></a></li>
+                        <li><a class="page-numbers" href="blog.php?page=<?php echo $current_page - 1; ?>"><i class="fa-solid fa-arrow-left-long"></i></a></li>
                         <?php endif; ?>
 
                         <?php for ($p = 1; $p <= $total_pages; $p++): ?>
                         <li>
-                            <a class="page-numbers<?php echo ($p === $current_page) ? ' current' : ''; ?>" href="news.php?page=<?php echo $p; ?>">
+                            <a class="page-numbers<?php echo ($p === $current_page) ? ' current' : ''; ?>" href="blog.php?page=<?php echo $p; ?>">
                                 <?php echo str_pad($p, 2, '0', STR_PAD_LEFT); ?>
                             </a>
                         </li>
                         <?php endfor; ?>
 
                         <?php if ($current_page < $total_pages): ?>
-                        <li><a class="page-numbers" href="news.php?page=<?php echo $current_page + 1; ?>"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                        <li><a class="page-numbers" href="blog.php?page=<?php echo $current_page + 1; ?>"><i class="fa-solid fa-arrow-right-long"></i></a></li>
                         <?php endif; ?>
                     </ul>
                 </div>
