@@ -731,8 +731,8 @@ include_once 'includes/header.php';
                                     <?php echo $category; ?>
                                 </li>
                             </ul>
-                            <h5><a href="news-details.php?s=<?php echo $slug; ?>"><?php echo $title; ?></a></h5>
-                            <a href="news-details.php?s=<?php echo $slug; ?>" class="link-btn">Read More <i
+                            <h5><a href="blog-detail.php?s=<?php echo $slug; ?>"><?php echo $title; ?></a></h5>
+                            <a href="blog-detail.php?s=<?php echo $slug; ?>" class="link-btn">Read More <i
                                     class="fa-regular fa-arrow-right-long"></i></a>
                             <div class="post-date">
                                 <i class="fa-light fa-calendar-days"></i>

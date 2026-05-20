@@ -78,7 +78,7 @@
                                             </li>
                                         </ul>
                                         <h6>
-                                            <a href="news-details.php">
+                                            <a href="blog-detail.php">
                                                 Decoding Local SEO: How to <br> Dominate Delhi NCR’s Search
                                             </a>
                                         </h6>
@@ -96,7 +96,7 @@
                                             </li>
                                         </ul>
                                         <h6>
-                                            <a href="news-details.php">
+                                            <a href="blog-detail.php">
                                                 Visual Psychology: Why Every <br> Pixel Matters
                                             </a>
                                         </h6>

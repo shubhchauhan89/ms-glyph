@@ -108,7 +108,7 @@ include_once 'includes/header.php';
                             <i class="fa-solid fa-chevron-right"></i>
                         </li>
                         <li>
-                            <a href="news-column.php">Insights</a>
+                            <a href="blog-category.php">Insights</a>
                         </li>
                         <?php if (!empty($selected_cat)): ?>
                         <li>
@@ -117,8 +117,8 @@ include_once 'includes/header.php';
                         <li><?php echo htmlspecialchars($selected_cat); ?></li>
                         <?php endif; ?>
                     </ul>
-                    <p class="wow fadeInUp mt-4 text-white" data-wow-delay=".7s" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
-                        Technical blueprints, SEO strategies, and creative psychological insights for the modern brand.
+                    <p class="wow fadeInUp mt-4 " data-wow-delay=".7s" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                        Technical blueprints and creative psychological insights for the modern brand.
                     </p>
                 </div>
             </div>
@@ -154,7 +154,7 @@ include_once 'includes/header.php';
                                             </li>
                                         </ul>
                                         <h3>
-                                            <a href="news-details.php?slug=<?php echo urlencode($blog['url']); ?>">
+                                            <a href="blog-detail.php?slug=<?php echo urlencode($blog['url']); ?>">
                                                 <?php echo htmlspecialchars($blog['title']); ?>
                                             </a>
                                         </h3>
@@ -164,7 +164,7 @@ include_once 'includes/header.php';
                                             echo htmlspecialchars(substr($plain_excerpt, 0, 150)) . (strlen($plain_excerpt) > 150 ? '...' : '');
                                             ?>
                                         </p>
-                                        <a href="news-details.php?slug=<?php echo urlencode($blog['url']); ?>" class="theme-btn">
+                                        <a href="blog-detail.php?slug=<?php echo urlencode($blog['url']); ?>" class="theme-btn">
                                             Read More <i class="fa-regular fa-arrow-right-long"></i>
                                         </a>
                                     </div>
@@ -179,7 +179,7 @@ include_once 'includes/header.php';
                                     <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 24px;">
                                         This sector is currently uncharted. Explore other categories or return to the full archive.
                                     </p>
-                                    <a href="news-column.php" class="theme-btn">View All Insights <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a href="blog-category.php" class="theme-btn">View All Insights <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                             <?php endif; ?>
 
@@ -187,7 +187,7 @@ include_once 'includes/header.php';
                             <?php if ($blog_count > 0): ?>
                             <div class="page-nav-wrap pt-5 text-center">
                                 <ul>
-                                    <li><a class="page-numbers active" href="news-column.php<?php echo !empty($selected_cat) ? '?cat=' . urlencode($selected_cat) : ''; ?>">01</a></li>
+                                    <li><a class="page-numbers active" href="blog-category.php<?php echo !empty($selected_cat) ? '?cat=' . urlencode($selected_cat) : ''; ?>">01</a></li>
                                 </ul>
                             </div>
                             <?php endif; ?>
@@ -205,7 +205,7 @@ include_once 'includes/header.php';
                                     <h4>Search</h4>
                                 </div>
                                 <div class="search-widget">
-                                    <form action="news-column.php" method="GET">
+                                    <form action="blog-category.php" method="GET">
                                         <input type="text" name="search" placeholder="Search insights...">
                                         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                                     </form>
@@ -220,19 +220,19 @@ include_once 'includes/header.php';
                                 <div class="news-widget-categories">
                                     <ul>
                                         <li class="<?php echo empty($selected_cat) ? 'active' : ''; ?>">
-                                            <a href="news-column.php">All Insights</a>
+                                            <a href="blog-category.php">All Insights</a>
                                         </li>
                                         <?php if (!empty($categories)): ?>
                                             <?php foreach ($categories as $cat): ?>
                                             <li class="<?php echo ($selected_cat === $cat['category']) ? 'active' : ''; ?>">
-                                                <a href="news-column.php?cat=<?php echo urlencode($cat['category']); ?>">
+                                                <a href="blog-category.php?cat=<?php echo urlencode($cat['category']); ?>">
                                                     <?php echo htmlspecialchars($cat['category']); ?>
                                                 </a>
                                                 <span>(<?php echo (int)$cat['post_count']; ?>)</span>
                                             </li>
                                             <?php endforeach; ?>
                                         <?php else: ?>
-                                            <li><a href="news-column.php">Uncategorized</a></li>
+                                            <li><a href="blog-category.php">Uncategorized</a></li>
                                         <?php endif; ?>
                                     </ul>
                                 </div>
@@ -262,7 +262,7 @@ include_once 'includes/header.php';
                                                     </li>
                                                 </ul>
                                                 <h6>
-                                                    <a href="news-details.php?slug=<?php echo urlencode($recent['url']); ?>">
+                                                    <a href="blog-detail.php?slug=<?php echo urlencode($recent['url']); ?>">
                                                         <?php echo htmlspecialchars(substr($recent['title'], 0, 45)) . (strlen($recent['title']) > 45 ? '...' : ''); ?>
                                                     </a>
                                                 </h6>
@@ -282,14 +282,14 @@ include_once 'includes/header.php';
                                 </div>
                                 <div class="news-widget-categories">
                                     <div class="tagcloud">
-                                        <a href="news-column.php?cat=<?php echo urlencode('SEO Strategy'); ?>">SEO</a>
-                                        <a href="news-column.php?cat=<?php echo urlencode('Design Thinking'); ?>">Branding</a>
-                                        <a href="news-column.php?cat=<?php echo urlencode('Design Thinking'); ?>">Design</a>
-                                        <a href="news-column.php">Delhi NCR</a>
-                                        <a href="news-column.php?cat=<?php echo urlencode('Marketing'); ?>">Marketing</a>
-                                        <a href="news-column.php?cat=<?php echo urlencode('Design Thinking'); ?>">UI/UX</a>
-                                        <a href="news-column.php?cat=<?php echo urlencode('Global Scaling'); ?>">Global</a>
-                                        <a href="news-column.php?cat=<?php echo urlencode('SEO Strategy'); ?>">Development</a>
+                                        <a href="blog-category.php?cat=<?php echo urlencode('SEO Strategy'); ?>">SEO</a>
+                                        <a href="blog-category.php?cat=<?php echo urlencode('Design Thinking'); ?>">Branding</a>
+                                        <a href="blog-category.php?cat=<?php echo urlencode('Design Thinking'); ?>">Design</a>
+                                        <a href="blog-category.php">Delhi NCR</a>
+                                        <a href="blog-category.php?cat=<?php echo urlencode('Marketing'); ?>">Marketing</a>
+                                        <a href="blog-category.php?cat=<?php echo urlencode('Design Thinking'); ?>">UI/UX</a>
+                                        <a href="blog-category.php?cat=<?php echo urlencode('Global Scaling'); ?>">Global</a>
+                                        <a href="blog-category.php?cat=<?php echo urlencode('SEO Strategy'); ?>">Development</a>
                                     </div>
                                 </div>
                             </div>

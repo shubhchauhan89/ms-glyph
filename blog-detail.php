@@ -101,9 +101,9 @@ include_once 'includes/header.php';
                                     <div class="col-lg-8 col-12">
                                         <div class="tagcloud"> 
                                             <span>Tags:</span>                                  
-                                            <a href="news-details.php">Security</a>
-                                            <a href="news-details.php">UI/UX Desing</a>
-                                            <a href="news-details.php">Digital</a>
+                                            <a href="blog-detail.php">Security</a>
+                                            <a href="blog-detail.php">UI/UX Desing</a>
+                                            <a href="blog-detail.php">Digital</a>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-12 mt-3 mt-lg-0 text-lg-end">
@@ -127,10 +127,10 @@ include_once 'includes/header.php';
                                         <div class="content">
                                             <div class="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
                                                 <div class="con">
-                                                    <h5><a href="news-details.php">Leslie Alexander</a></h5>
+                                                    <h5><a href="blog-detail.php">Leslie Alexander</a></h5>
                                                     <span>February 10, 2026 at 2:37 pm</span>
                                                 </div>
-                                                <a href="news-details.php" class="reply">Reply</a>
+                                                <a href="blog-detail.php" class="reply">Reply</a>
                                             </div>
                                             <p class="mt-30 mb-4">
                                                 Effective design is more than aesthetics; it is a psychological tool. We engineer every pixel to build trust and authority in competitive markets.
@@ -144,10 +144,10 @@ include_once 'includes/header.php';
                                         <div class="content">
                                             <div class="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
                                                 <div class="con">
-                                                    <h5><a href="news-details.php">Ralph Edwards</a></h5>
+                                                    <h5><a href="blog-detail.php">Ralph Edwards</a></h5>
                                                     <span>February 10, 2026 at 2:37 pm</span>
                                                 </div>
-                                                <a href="news-details.php" class="reply">Reply</a>
+                                                <a href="blog-detail.php" class="reply">Reply</a>
                                             </div>
                                             <p class="mt-30 mb-4">
                                                 Effective design is more than aesthetics; it is a psychological tool. We engineer every pixel to build trust and authority in competitive markets.
@@ -206,11 +206,11 @@ include_once 'includes/header.php';
                                     </div>
                                     <div class="news-widget-categories">
                                         <ul>
-                                            <li><a href="news-details.php">Digital Agency</a> <span>(7)</span></li>
-                                            <li><a href="news-details.php">Business</a> <span>(4)</span></li>
-                                            <li class="active"><a href="news-details.php">Digital Product</a> <span>(5)</span></li>
-                                            <li><a href="news-details.php">Social Marketing</a> <span>(3)</span></li>
-                                            <li><a href="news-details.php">System</a> <span>(6)</span></li>
+                                            <li><a href="blog-detail.php">Digital Agency</a> <span>(7)</span></li>
+                                            <li><a href="blog-detail.php">Business</a> <span>(4)</span></li>
+                                            <li class="active"><a href="blog-detail.php">Digital Product</a> <span>(5)</span></li>
+                                            <li><a href="blog-detail.php">Social Marketing</a> <span>(3)</span></li>
+                                            <li><a href="blog-detail.php">System</a> <span>(6)</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -231,7 +231,7 @@ include_once 'includes/header.php';
                                                     </li>
                                                 </ul>
                                                 <h6>
-                                                    <a href="news-details.php">
+                                                    <a href="blog-detail.php">
                                                         Which Yoga Hybrid is Right <br> for Your?
                                                     </a>
                                                 </h6>
@@ -249,7 +249,7 @@ include_once 'includes/header.php';
                                                     </li>
                                                 </ul>
                                                 <h6>
-                                                    <a href="news-details.php">
+                                                    <a href="blog-detail.php">
                                                         Keep Your Business Safe <br> Ensure High Availability
                                                     </a>
                                                 </h6>
@@ -267,7 +267,7 @@ include_once 'includes/header.php';
                                                     </li>
                                                 </ul>
                                                 <h6>
-                                                    <a href="news-details.php">
+                                                    <a href="blog-detail.php">
                                                         Tackling the Changes of <br> Retell Industry
                                                     </a>
                                                 </h6>
@@ -281,15 +281,15 @@ include_once 'includes/header.php';
                                     </div>
                                     <div class="news-widget-categories">
                                         <div class="tagcloud">
-                                            <a href="news-details.php">Security</a>     
-                                            <a href="news-details.php">Business</a>
-                                            <a href="news-details.php">Digital</a>
-                                            <a href="news-details.php">Technology</a>
-                                            <a href="news-details.php">Change</a>
-                                            <a href="news-details.php">Video</a>
-                                            <a href="news-details.php">UI/UX Desing</a>
-                                            <a href="news-details.php">Startup</a>
-                                            <a href="news-details.php">Services</a>
+                                            <a href="blog-detail.php">Security</a>     
+                                            <a href="blog-detail.php">Business</a>
+                                            <a href="blog-detail.php">Digital</a>
+                                            <a href="blog-detail.php">Technology</a>
+                                            <a href="blog-detail.php">Change</a>
+                                            <a href="blog-detail.php">Video</a>
+                                            <a href="blog-detail.php">UI/UX Desing</a>
+                                            <a href="blog-detail.php">Startup</a>
+                                            <a href="blog-detail.php">Services</a>
                                         </div>
                                     </div>
                                 </div>

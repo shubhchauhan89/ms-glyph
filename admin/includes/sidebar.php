@@ -4,7 +4,7 @@
             class="ion-close"></i></button><!-- LOGO -->
     <div class="topbar-left">
         <div class="text-center bg-logo">
-            <a href="index.php" class="logo"><img src="assets/images/<?php echo htmlspecialchars($roww["header_logo"]); ?>" height="75px" alt="logo"></a> 
+            <a href="index.php" class="logo"><img src="assets/images/<?php echo htmlspecialchars($roww["header_logo"]); ?>" height="45px" alt="logo"></a> 
         </div>
     </div>
     <div class="sidebar-inner slimscrollleft">
