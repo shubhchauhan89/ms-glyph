@@ -9,12 +9,20 @@ if (isset($_GET['url'])) {
     $stmt->execute();
     $product = $stmt->get_result();
     $fetch = mysqli_fetch_array($product);
+    
+    $raw_desc = !empty($fetch['blog_meta_desc']) ? $fetch['blog_meta_desc'] : '';
+        $clean_desc = trim(strip_tags(html_entity_decode($raw_desc, ENT_QUOTES, 'UTF-8')));
+        
+        if (strlen($clean_desc) > 160) {
+            $clean_desc = substr($clean_desc, 0, 152) . '...';
+        }
 } else {
     $fetch = array(); // Define an empty array to avoid "undefined index" error
 }
 $settings = mysqli_query($con, "SELECT * FROM settings where id='1'");
 $row = mysqli_fetch_array($settings);
 
+$canonical_url = $domain . "blog/" . $fetch['url']; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,39 +42,41 @@ $row = mysqli_fetch_array($settings);
     <meta property="og:title" content="MS Glyph - Precision in Every Pixel.">
     <meta property="og:description"
         content="Technical architecture meets creative power. Discover our integrated SEO, design, and translation solutions.">
-    <meta property="og:image" content="assets/img/logo/og-image.jpg">
+    <meta property="og:image" content="<?php echo $domain; ?>assets/img/logo/og-image.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MS Glyph - Precision in Every Pixel.">
     <meta name="twitter:description"
         content="Technical architecture meets creative power. Discover our integrated SEO, design, and translation solutions.">
-    <meta name="twitter:image" content="assets/img/logo/og-image.jpg">
+    <meta name="twitter:image" content="<?php echo $domain; ?>assets/img/logo/og-image.jpg">
 
     <!-- ======== Page title ============ -->
     <title><?php echo isset($page_title) ? htmlspecialchars($page_title) . " | " . htmlspecialchars($site_name) : htmlspecialchars($site_name) . " | Precision Digital Agency"; ?></title>
+    <meta name="keywords" content="<?php echo isset($fetch['blog_meta_title']) ? htmlspecialchars($fetch['blog_meta_title']) : ''; ?>">
+    <meta name="description" content="<?php echo isset($clean_desc) ? htmlspecialchars($clean_desc) : ''; ?>">
     <!--<< Favcion >>-->
-    <link rel="shortcut icon" href="assets/img/logo/favicon.svg">
+    <link rel="shortcut icon" href="<?php echo $domain; ?>assets/img/logo/favicon.svg">
     <!--<< Bootstrap min.css >>-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/bootstrap.min.css">
     <!--<< All Min Css >>-->
-    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/all.min.css">
     <!--<< Animate.css >>-->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/animate.css">
     <!--<< Icomoon.css >>-->
-    <link rel="stylesheet" href="assets/css/icomoon.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/icomoon.css">
     <!--<< Magnific Popup.css >>-->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/magnific-popup.css">
     <!--<< MeanMenu.css >>-->
-    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/meanmenu.css">
     <!--<< Swiper Bundle.css >>-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/swiper-bundle.min.css">
     <!--<< Nice Select.css >>-->
-    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/nice-select.css">
     <!--<< Color.css >>-->
-    <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/color.css">
     <!--<< Main.css >>-->
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="<?php echo $domain; ?>assets/css/main.css">
 </head>
 
 <body>
@@ -130,7 +140,7 @@ $row = mysqli_fetch_array($settings);
                     <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                         <div class="offcanvas__logo">
                             <a href="index.php">
-                                <img src="assets/img/logo/black-logo.svg" alt="logo-img">
+                                <img src="<?php echo $domain; ?>assets/img/logo/black-logo.svg" alt="logo-img">
                             </a>
                         </div>
                         <div class="offcanvas__close">
@@ -207,7 +217,7 @@ $row = mysqli_fetch_array($settings);
                 <div class="header-main">
                     <div class="logo">
                         <a href="index.php" class="header-logo-3">
-                            <img src="assets/img/logo/black-logo.svg" alt="logo-img">
+                            <img src="<?php echo $domain; ?>assets/img/logo/black-logo.svg" alt="logo-img">
                         </a>
                     </div>
                     <div class="mean__menu-wrapper">
