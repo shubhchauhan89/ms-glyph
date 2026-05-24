@@ -2,27 +2,53 @@
 include 'admin/includes/conn.php';
 include 'admin/includes/db.php';
 // Check if 'url' is set in $_GET array
-if (isset($_GET['url'])) {
-    //fetch products 
-    $stmt = $con->prepare("SELECT * FROM blog WHERE url=?");
-    $stmt->bind_param("s", $_GET['url']);
-    $stmt->execute();
-    $product = $stmt->get_result();
-    $fetch = mysqli_fetch_array($product);
-    
-    $raw_desc = !empty($fetch['blog_meta_desc']) ? $fetch['blog_meta_desc'] : '';
-        $clean_desc = trim(strip_tags(html_entity_decode($raw_desc, ENT_QUOTES, 'UTF-8')));
-        
-        if (strlen($clean_desc) > 160) {
-            $clean_desc = substr($clean_desc, 0, 152) . '...';
-        }
-} else {
-    $fetch = array(); // Define an empty array to avoid "undefined index" error
+// 1. Check if URL slug is provided, otherwise bounce them back to the blog grid
+if (!isset($_GET['url']) || empty($_GET['url'])) {
+    header("Location: blog.php");
+    exit;
 }
-$settings = mysqli_query($con, "SELECT * FROM settings where id='1'");
+
+$url_slug = $_GET['url'];
+
+// 2. Fetch the specific blog post safely using MySQLi prepared statements
+$blog_stmt = $con->prepare("SELECT * FROM `blog` WHERE `url` = ? LIMIT 1");
+$blog_stmt->bind_param('s', $url_slug);
+$blog_stmt->execute();
+$blog_result = $blog_stmt->get_result();
+
+// Redirect to listing if the blog doesn't exist
+if ($blog_result->num_rows === 0) {
+    header("Location: blog.php");
+    exit;
+}
+
+$settings = mysqli_query($con, "SELECT * FROM settings WHERE id='1'");
 $row = mysqli_fetch_array($settings);
 
-$canonical_url = $domain . "blog/" . $fetch['url']; 
+$blog = $blog_result->fetch_assoc();
+$blog_stmt->close();
+
+// Note: To make your dynamic Meta Titles, Descriptions, and Keywords work perfectly,
+// your './includes/blog-header.php' should echo these variables out in its <head> section:
+// e.g., <title><?php echo isset($meta_title) ? $meta_title : 'Default Title'; ? ></title>
+$meta_title = htmlspecialchars($blog['blog_meta_title']);
+$meta_desc = htmlspecialchars($blog['blog_meta_desc']);
+$meta_keywords = htmlspecialchars($blog['blog_meta_keywords']);
+
+// 3. Fetch Sidebar Data dynamically (Categories & Latest 3 Posts)
+$categories_result = $con->query("SELECT * FROM `category` ORDER BY `cat_name` ASC");
+$categories = [];
+while ($cat_row = $categories_result->fetch_assoc()) {
+    $categories[] = $cat_row;
+}
+
+$latest_result = $con->query("SELECT * FROM `blog` WHERE `id` != {$blog['id']} ORDER BY `id` DESC LIMIT 3");
+$latest_posts = [];
+while ($post_row = $latest_result->fetch_assoc()) {
+    $latest_posts[] = $post_row;
+}
+
+$canonical_url = $domain . "blog/" . $blog['url']; 
 ?>
 <!DOCTYPE html>
 <html lang="en">

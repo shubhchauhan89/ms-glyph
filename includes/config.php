@@ -10,12 +10,16 @@ require_once __DIR__ . '/db.php';
 // Default / Hardcoded Configuration (Fallback if DB fails)
 $agency_blueprint = [
     'agency_name' => 'MS Glyph',
-    'address' => 'Block C, Yamuna Vihar, Delhi, 110053',
-    'primary_email' => 'hello@msglyph.com',
+    'address' => 'C1, Street no 1, Block B, Yamuna Vihar, Delhi, 110053',
+    'primary_email' => 'contact@msglyph.in',
+    'primary_number' => '+91-9871399431',
     'service_area' => 'Delhi NCR',
     'agency_description' => 'MS Glyph is a premier creative studio where visual precision meets editorial power. We act as the elite silent partner and extended execution arm for consultants, local leaders, and global brands.',
     'social_linkedin' => 'https://linkedin.com/company/msglyph',
-    'social_instagram' => 'https://instagram.com/msglyph'
+    'social_instagram' => 'https://instagram.com/msglyph',
+    'social_facebook' => 'https://facebook.com/company/msglyph',
+    'social_twitter' => 'https://x.com/msglyph',
+    'social_youtube' => 'https://youtube.com/msglyph'
 ];
 
 // Attempt to override with database configuration
@@ -41,6 +45,11 @@ if ($agency_blueprint_conn) {
                 $agency_blueprint['agency_description'] = $db_settings['agency_description'] ?? $agency_blueprint['agency_description'];
                 $agency_blueprint['social_linkedin'] = $db_settings['linkedin'] ?? $agency_blueprint['social_linkedin'];
                 $agency_blueprint['social_instagram'] = $db_settings['instagram'] ?? $agency_blueprint['social_instagram'];
+                $agency_blueprint['social_facebook'] = $db_settings['facebook'] ?? $agency_blueprint['social_facebook'];
+                $agency_blueprint['social_twitter'] = $db_settings['twitter'] ?? $agency_blueprint['social_twitter'];
+                $agency_blueprint['social_youtube'] = $db_settings['youtube'] ?? $agency_blueprint['social_youtube'];
+                $agency_blueprint['primary_number'] = $db_settings['phone'] ?? $agency_blueprint['primary_number'];
+                $agency_blueprint['map'] = $db_settings['map'] ?? "";
             }
         }
     } catch (PDOException $e) {
@@ -57,4 +66,9 @@ $site_area = $agency_blueprint['service_area'];
 $site_description = $agency_blueprint['agency_description'];
 $site_linkedin = $agency_blueprint['social_linkedin'];
 $site_instagram = $agency_blueprint['social_instagram'];
+$site_facebook = $agency_blueprint['social_facebook'];
+$site_twitter = $agency_blueprint['social_twitter'];
+$site_youtube = $agency_blueprint['social_youtube'];
+$site_number = $agency_blueprint['primary_number'];
+$site_map = $agency_blueprint['map'];
 ?>

@@ -83,11 +83,12 @@ foreach ($categorySegments as $categorySegment) {
 <head>
     <!-- ========== Meta Tags ========== -->
     <meta charset="UTF-8">
+    <base href="/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="MS Glyph">
     <meta name="description"
-        content="MS Glyph is a premier digital agency providing high-ticket design, technical SEO, and global content solutions. Precision-driven execution for consultants and brands.">
+        content="MS Glyph is a premier creative studio where visual precision meets editorial power. We act as the elite silent partner and extended execution arm for consultants, local leaders, and global brands.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -266,7 +267,7 @@ foreach ($categorySegments as $categorySegment) {
                     <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                         <div class="offcanvas__logo">
                             <a href="index.php">
-                                <img src="<?php echo $domain; ?>assets/img/logo/black-logo.svg" alt="logo-img">
+                                <img src="<?php echo $domain; ?>admin/assets/images/<?php echo htmlspecialchars($row["header_logo"]); ?>" alt="logo-img">
                             </a>
                         </div>
                         <div class="offcanvas__close">
@@ -361,12 +362,12 @@ foreach ($categorySegments as $categorySegment) {
                                             <i class="fa-solid fa-chevron-down"></i>
                                         </a>
                                         <ul class="submenu">
-                                            <li><a href="service-details.php">Branding & Identity</a></li>
-                                            <li><a href="service-details.php">Digital Design & UI Graphics</a></li>
-                                            <li><a href="service-details.php">Social Media & Ad Creatives</a></li>
-                                            <li><a href="service-details.php">Print & Packaging Design</a></li>
-                                            <li><a href="service-details.php">Presentation & Educational Slides</a></li>
-                                            <li><a href="service-details.php">Translation & Editorial Workflows</a></li>
+                                            <li><a href="service-detail.php">Branding & Identity</a></li>
+                                            <li><a href="service-detail.php">Digital Design & UI Graphics</a></li>
+                                            <li><a href="service-detail.php">Social Media & Ad Creatives</a></li>
+                                            <li><a href="service-detail.php">Print & Packaging Design</a></li>
+                                            <li><a href="service-detail.php">Presentation & Educational Slides</a></li>
+                                            <li><a href="service-detail.php">Translation & Editorial Workflows</a></li>
                                         </ul>
                                     </li>
                                     <li>

@@ -48,7 +48,7 @@ include_once 'includes/header.php';
                             <div class="content">
                                 <h3>Our Studio</h3>
                                 <p>
-                                    Block C, Yamuna Vihar, Delhi, 110053.
+                                    <?php echo htmlspecialchars($site_address); ?>
                                 </p>
                             </div>
                         </div>
@@ -61,7 +61,7 @@ include_once 'includes/header.php';
                             <div class="content">
                                 <h3>Digital Correspondence</h3>
                                 <p>
-                                    <a href="mailto:hello@msglyph.com">hello@msglyph.com</a>
+                                    <a href="mailto:<?php echo htmlspecialchars($site_email); ?>"><?php echo htmlspecialchars($site_email); ?></a>
                                 </p>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ include_once 'includes/header.php';
                             <div class="content">
                                 <h3>Direct Line</h3>
                                 <p>
-                                    <a href="tel:+910000000000">+91-000-0000000</a>
+                                    <a href="tel:+91<?php echo htmlspecialchars($site_number); ?>">+91-<?php echo htmlspecialchars($site_number); ?></a>
                                 </p>
                             </div>
                         </div>
@@ -104,7 +104,7 @@ include_once 'includes/header.php';
                         <div class="col-lg-6">
                             <div class="map-items">
                                 <div class="googpemap">
-                                    <iframe src="https://maps.google.com/maps?q=Block%20C,%20Yamuna%20Vihar,%20Delhi,%20110053&t=&z=13&ie=UTF8&iwloc=&output=embed" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d874.9041734950052!2d77.2706916753922!3d28.701110594549085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfc13b3ab8ff1%3A0x57f6407f84107f8c!2sB1%2F18%2C%20C1%20Block%2C%20Block%20B%2C%20Yamuna%20Vihar%2C%20Shahdara%2C%20Delhi%2C%20110053!5e0!3m2!1sen!2sin!4v1779634350654!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                             </div>
                         </div>
